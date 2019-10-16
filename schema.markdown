@@ -1,0 +1,8 @@
+---
+layout: page
+title: ICT Schema
+permalink: /schema/
+---
+
+Dit is het schema van de samenwerking van [GNUCash](https://gnucash.org) en
+[LibreOffice](https://libreoffice.org).
