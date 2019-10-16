@@ -21,7 +21,7 @@
 title: Volkstuinvereniging Ontspanning na Arbeid
 email: ona@kpnmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Volkstuinvereniging ONA is de Volkstuinvereniging voor echte nerds
+  ONA voor natuurlijk tuinieren zonder poespas
 baseurl: "/ona-volkstuin" # the subpath of your site, e.g. /blog
 url: "https://slspeek.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -29,7 +29,9 @@ url: "https://slspeek.github.io" # the base hostname & protocol for your site, e
 theme: minima
 plugins:
   - jekyll-feed
+  - jemoji
 
+gems: ["jemoji"]
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
