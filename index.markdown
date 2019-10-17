@@ -7,3 +7,5 @@ list_title: Berichten
 ---
 
 Welkom op de ONA website :seedling:
+
+![slangenkruid]({{site.baseurl}}/assets/img/slangenkruid.jpg)

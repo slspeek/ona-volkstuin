@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Over ONA
+title: Over
 permalink: /over/
 ---
 
-Nerd zijn is het leukste met een ONA volkstuin
+Een tuin zonder water of stroom voor een betaalbare prijs.
