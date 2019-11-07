@@ -10,7 +10,7 @@ Dit is het schema van de samenwerking van [GNUCash](https://gnucash.org) en
 
 met legenda
 
-[![Legenda](({{site.baseurl}}/assets/img/legenda.png)]({{site.baseurl}}/assets/img/legenda.png)
+[![Legenda]({{site.baseurl}}/assets/img/legenda.png)]({{site.baseurl}}/assets/img/legenda.png)
 
 
 Er is een schema van de database ona-ledenlijst.odb [alleen]({{site.baseurl}}/db-schema-docs/index.html).
