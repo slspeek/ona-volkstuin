@@ -35,7 +35,7 @@
 <table width='100%' border='0'>
 <tr valign='top'><td class='container' align='left' valign='top'>
 <form name='options' action=''>
- <label for='implied'><input type=checkbox id='implied' checked>Implied relationships</label>
+ <label for='implied'><input type=checkbox id='implied'>Implied relationships</label>
  <label for='showRelatedCols'><input type=checkbox id='showRelatedCols'>Related columns</label>
  <label for='showConstNames'><input type=checkbox id='showConstNames'>Constraints</label>
  <label for='showComments'><input type=checkbox id='showComments'>Comments</label>
@@ -111,6 +111,12 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'></td>
  <td class='detail'>
   <table border='0' width='100%' cellspacing='0' cellpadding='0'>
+   <tr class='relative even' valign='top'>
+    <td class='relatedTable detail' title="filterOpzegging.RContractID refs Opzegging.RContractID via SYS_FK_129"><a href='filterOpzegging.html'>filterOpzegging</a><span class='relatedKey'>.RContractID</span>
+    </td>
+    <td class='constraint detail'>SYS_FK_129<span title='Restrict delete:
+ Parent cannot be deleted if children exist'>&nbsp;R</span></td>
+   </tr>
    <tr class='impliedRelationship relative even' valign='top'>
     <td class='relatedTable detail' title="jnContractLidOpz.RContractID's name implies that it's a child of Opzegging.RContractID, but it doesn't reference that column."><a href='jnContractLidOpz.html'>jnContractLidOpz</a><span class='relatedKey'>.RContractID</span>
     </td>
@@ -195,8 +201,19 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
+<tr class='even'>
+ <td class='detail'>OvernamEind</td>
+ <td class='detail'>numeric</td>
+ <td class='detail' align='right'>100,2</td>
+ <td class='detail' align='center' title='nullable'>&nbsp;&radic;&nbsp;</td>
+ <td class='detail' align='center'></td>
+ <td class='detail' align='right'>null</td>
+ <td class='detail'></td>
+ <td class='detail'> </td>
+ <td class='comment detail'></td>
+</tr>
 </table>
-<p title='6 columns'>Table contained 3 rows at za okt. 19 00:43 CEST 2019<p/>
+<p title='7 columns'>Table contained 5 rows at vr nov. 08 00:08 CET 2019<p/>
 </td></tr></table>
 <div class='indent'>
 <b>Indexes:</b>
@@ -220,18 +237,20 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </div>
 <table width='100%' border='0'><tr><td class='container'>
 <br><form action='get'><b>Close relationships:</b></form><map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="Opzegging.html" title="Opzegging" alt="" coords="5,5,227,213">
+<area shape="rect" id="node1" href="filterOpzegging.html" title="filterOpzegging" alt="" coords="277,5,404,112">
+<area shape="rect" id="node2" href="Opzegging.html" title="Opzegging" alt="" coords="5,27,233,259">
 </map>
   <a name='diagram'><img id='oneDegreeImg' src='../diagrams/Opzegging.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>
 <map id="impliedTwoDegreesRelationshipsDiagram" name="impliedTwoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="jnContractLidOpz.html" title="jnContractLidOpz" alt="" coords="275,3473,417,4372">
-<area shape="rect" id="node2" href="Contract.html" title="Contract" alt="" coords="48,2860,184,2943">
-<area shape="rect" id="node3" href="Lid.html" title="Lid" alt="" coords="44,2004,188,2087">
-<area shape="rect" id="node4" href="Opzegging.html" title="Opzegging" alt="" coords="5,3195,227,3403">
-<area shape="rect" id="node5" href="vwContract.html" title="vwContract" alt="" coords="279,5,413,1144">
-<area shape="rect" id="node6" href="Tuin.html" title="Tuin" alt="" coords="48,1281,184,1364">
-<area shape="rect" id="node7" href="vwLopendContract.html" title="vwLopendContract" alt="" coords="271,1161,421,2300">
-<area shape="rect" id="node8" href="vwTuinenLijst.html" title="vwTuinenLijst" alt="" coords="279,2317,413,3456">
+<area shape="rect" id="node1" href="filterOpzegging.html" title="filterOpzegging" alt="" coords="289,4389,416,4496">
+<area shape="rect" id="node2" href="Opzegging.html" title="Opzegging" alt="" coords="5,3251,233,3483">
+<area shape="rect" id="node3" href="jnContractLidOpz.html" title="jnContractLidOpz" alt="" coords="282,3473,423,4372">
+<area shape="rect" id="node4" href="Contract.html" title="Contract" alt="" coords="51,2860,187,2943">
+<area shape="rect" id="node5" href="Lid.html" title="Lid" alt="" coords="47,2004,191,2087">
+<area shape="rect" id="node6" href="vwContract.html" title="vwContract" alt="" coords="286,5,419,1144">
+<area shape="rect" id="node7" href="Tuin.html" title="Tuin" alt="" coords="51,1281,187,1364">
+<area shape="rect" id="node8" href="vwLopendContract.html" title="vwLopendContract" alt="" coords="277,1161,428,2300">
+<area shape="rect" id="node9" href="vwTuinenLijst.html" title="vwTuinenLijst" alt="" coords="286,2317,419,3456">
 </map>
 
   <a name='diagram'><img id='impliedTwoDegreesImg' src='../diagrams/Opzegging.implied2degrees.png' usemap='#impliedTwoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>

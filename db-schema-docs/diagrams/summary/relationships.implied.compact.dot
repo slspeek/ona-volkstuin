@@ -1,4 +1,4 @@
-// dot 2.40.1 on Linux 4.19.0-5-amd64
+// dot 2.40.1 on Linux 4.19.0-6-amd64
 // SchemaSpy rev 590
 digraph "compactImpliedRelationshipsDiagram" {
   graph [
@@ -25,7 +25,7 @@ digraph "compactImpliedRelationshipsDiagram" {
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">Contract</TD></TR>
       <TR><TD PORT="ContractID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ContractID</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">126 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">126 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
     </TABLE>>
     URL="tables/Contract.html"
     tooltip="Contract"
@@ -63,6 +63,17 @@ digraph "compactImpliedRelationshipsDiagram" {
     URL="tables/Facturatie.html"
     tooltip="Facturatie"
   ];
+  "filterContract" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">filterContract</TD></TR>
+      <TR><TD PORT="FTID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">FTID</TD></TR>
+      <TR><TD PORT="ContractID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">ContractID</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 row</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
+    </TABLE>>
+    URL="tables/filterContract.html"
+    tooltip="filterContract"
+  ];
   "filterInschrijfFactuur" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -84,6 +95,17 @@ digraph "compactImpliedRelationshipsDiagram" {
     </TABLE>>
     URL="tables/filterKoopFactuur.html"
     tooltip="filterKoopFactuur"
+  ];
+  "filterOpzegging" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">filterOpzegging</TD></TR>
+      <TR><TD PORT="FOPID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">FOPID</TD></TR>
+      <TR><TD PORT="RContractID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">RContractID</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 row</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
+    </TABLE>>
+    URL="tables/filterOpzegging.html"
+    tooltip="filterOpzegging"
   ];
   "FJaar" [
     label=<
@@ -149,7 +171,7 @@ digraph "compactImpliedRelationshipsDiagram" {
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">Opzegging</TD></TR>
       <TR><TD PORT="RContractID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">RContractID</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">3 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">5 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
     </TABLE>>
     URL="tables/Opzegging.html"
     tooltip="Opzegging"
@@ -309,8 +331,10 @@ digraph "compactImpliedRelationshipsDiagram" {
   ];
   "dcLid":"LidID":w -> "Lid":"LidID":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "dcTuinNoordWoord":"TuinID":w -> "Tuin":"TuinID":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "filterContract":"ContractID":w -> "Contract":"ContractID":e [arrowhead=none dir=back arrowtail=crowodot];
   "filterInschrijfFactuur":"LidID":w -> "Lid":"LidID":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "filterKoopFactuur":"LidID":w -> "Lid":"LidID":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "filterOpzegging":"RContractID":w -> "Opzegging":"RContractID":e [arrowhead=none dir=back arrowtail=crowodot];
   "jnContractLid":"ContractID":w -> "Contract":"ContractID":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "jnContractLid":"LidID":w -> "Lid":"LidID":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "jnContractLidOpz":"ContractID":w -> "Contract":"ContractID":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];

@@ -3,6 +3,7 @@
    <tables>
       <table name="Contract" numRows="126" remarks="" schema="PUBLIC" type="TABLE">
          <column autoUpdated="true" digits="0" id="0" name="ContractID" nullable="false" remarks="" size="4" type="INTEGER">
+            <child column="ContractID" foreignKey="SYS_FK_175" implied="false" onDeleteCascade="false" table="filterContract"/>
             <child column="ContractID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="jnContractLid"/>
             <child column="ContractID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="jnContractLidOpz"/>
             <child column="ContractID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="vwContract"/>
@@ -78,6 +79,19 @@
             <column ascending="true" name="RKostenpostID"/>
          </index>
       </table>
+      <table name="filterContract" numRows="1" remarks="" schema="PUBLIC" type="TABLE">
+         <column autoUpdated="false" digits="0" id="0" name="FTID" nullable="false" remarks="" size="1" type="BOOLEAN"/>
+         <column autoUpdated="false" digits="0" id="1" name="ContractID" nullable="false" remarks="" size="4" type="INTEGER">
+            <parent column="ContractID" foreignKey="SYS_FK_175" implied="false" onDeleteCascade="false" table="Contract"/>
+         </column>
+         <primaryKey column="FTID" sequenceNumberInPK="1"/>
+         <index name="SYS_IDX_176" unique="true">
+            <column ascending="true" name="FTID"/>
+         </index>
+         <index name="SYS_IDX_178" unique="false">
+            <column ascending="true" name="ContractID"/>
+         </index>
+      </table>
       <table name="filterInschrijfFactuur" numRows="1" remarks="" schema="PUBLIC" type="TABLE">
          <column autoUpdated="false" digits="0" id="0" name="FIID" nullable="false" remarks="" size="1" type="BOOLEAN"/>
          <column autoUpdated="false" digits="0" id="1" name="LidID" nullable="true" remarks="" size="4" type="INTEGER">
@@ -96,6 +110,19 @@
          <primaryKey column="FAID" sequenceNumberInPK="1"/>
          <index name="SYS_IDX_66" unique="true">
             <column ascending="true" name="FAID"/>
+         </index>
+      </table>
+      <table name="filterOpzegging" numRows="1" remarks="" schema="PUBLIC" type="TABLE">
+         <column autoUpdated="false" digits="0" id="0" name="FOPID" nullable="false" remarks="" size="1" type="BOOLEAN"/>
+         <column autoUpdated="false" digits="0" id="1" name="RContractID" nullable="false" remarks="" size="4" type="INTEGER">
+            <parent column="RContractID" foreignKey="SYS_FK_129" implied="false" onDeleteCascade="false" table="Opzegging"/>
+         </column>
+         <primaryKey column="FOPID" sequenceNumberInPK="1"/>
+         <index name="SYS_IDX_130" unique="true">
+            <column ascending="true" name="FOPID"/>
+         </index>
+         <index name="SYS_IDX_132" unique="false">
+            <column ascending="true" name="RContractID"/>
          </index>
       </table>
       <table name="FJaar" numRows="1" remarks="" schema="PUBLIC" type="TABLE">
@@ -239,8 +266,9 @@
             <parent column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Lid"/>
          </column>
       </table>
-      <table name="Opzegging" numRows="3" remarks="" schema="PUBLIC" type="TABLE">
+      <table name="Opzegging" numRows="5" remarks="" schema="PUBLIC" type="TABLE">
          <column autoUpdated="false" digits="0" id="0" name="RContractID" nullable="false" remarks="" size="4" type="INTEGER">
+            <child column="RContractID" foreignKey="SYS_FK_129" implied="false" onDeleteCascade="false" table="filterOpzegging"/>
             <child column="RContractID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="jnContractLidOpz"/>
             <child column="RContractID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="vwContract"/>
             <child column="RContractID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="vwLopendContract"/>
@@ -251,6 +279,7 @@
          <column autoUpdated="false" digits="0" id="3" name="Uitgekeerd" nullable="true" remarks="" size="1" type="BOOLEAN"/>
          <column autoUpdated="false" digits="0" id="4" name="Opmerkingen" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
          <column autoUpdated="false" digits="0" id="5" name="Einddatum" nullable="false" remarks="" size="8" type="DATE"/>
+         <column autoUpdated="false" digits="2" id="6" name="OvernamEind" nullable="true" remarks="" size="100" type="NUMERIC"/>
          <primaryKey column="RContractID" sequenceNumberInPK="1"/>
          <index name="SYS_IDX_54" unique="true">
             <column ascending="true" name="RContractID"/>

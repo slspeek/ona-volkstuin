@@ -1,12 +1,14 @@
 Lid
-Tuin
 Contract
+Tuin
 Opzegging
 Facturatie
 FJaar
 Prijs
 Tarief
+filterContract
 filterInschrijfFactuur
 filterKoopFactuur
+filterOpzegging
 FacturatiePost
 Kostenpost
