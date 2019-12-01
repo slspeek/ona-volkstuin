@@ -22,8 +22,8 @@ title: Volkstuinvereniging Ontspanning na Arbeid
 email: ona@kpnmail.nl
 description: >- # this means to ignore newlines until "baseurl:"
   ONA voor natuurlijk tuinieren zonder poespas
-baseurl: "/ona-volkstuin" # the subpath of your site, e.g. /blog
-url: "https://slspeek.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://onadiemen.nl" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 theme: minima
