@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Volkstuinvereniging Ontspanning na Arbeid
-email: ona@kpnmail.nl
+email: onadiemen@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   ONA voor natuurlijk tuinieren zonder poespas
 baseurl: "" # the subpath of your site, e.g. /blog
