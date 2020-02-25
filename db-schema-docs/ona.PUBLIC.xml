@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <database name="ona" schema="PUBLIC" type="HSQL Database Engine - 1.8.0">
    <tables>
-      <table name="Contract" numRows="126" remarks="" schema="PUBLIC" type="TABLE">
+      <table name="Contract" numRows="133" remarks="" schema="PUBLIC" type="TABLE">
          <column autoUpdated="true" digits="0" id="0" name="ContractID" nullable="false" remarks="" size="4" type="INTEGER">
-            <child column="ContractID" foreignKey="SYS_FK_175" implied="false" onDeleteCascade="false" table="filterContract"/>
-            <child column="ContractID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="jnContractLid"/>
-            <child column="ContractID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="jnContractLidOpz"/>
-            <child column="ContractID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="vwContract"/>
-            <child column="ContractID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="vwLopendContract"/>
-            <child column="ContractID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="vwTuinenLijst"/>
+            <child column="ContractID" foreignKey="SYS_FK_381" implied="false" onDeleteCascade="false" table="filterContract"/>
+            <child column="ContractID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="vwFilterContract"/>
          </column>
-         <column autoUpdated="false" digits="0" id="1" name="RLidID" nullable="false" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="2" name="RTuinID" nullable="false" remarks="" size="4" type="INTEGER"/>
+         <column autoUpdated="false" digits="0" id="1" name="RLidID" nullable="false" remarks="" size="4" type="INTEGER">
+            <parent column="LidID" foreignKey="SYS_FK_392" implied="false" onDeleteCascade="false" table="Lid"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="2" name="RTuinID" nullable="false" remarks="" size="4" type="INTEGER">
+            <parent column="TuinID" foreignKey="SYS_FK_397" implied="false" onDeleteCascade="false" table="Tuin"/>
+         </column>
          <column autoUpdated="false" defaultValue="CURRENT_DATE" digits="0" id="3" name="Ingang" nullable="false" remarks="" size="8" type="DATE"/>
          <column autoUpdated="false" digits="2" id="4" name="Borg" nullable="false" remarks="" size="100" type="NUMERIC"/>
          <column autoUpdated="false" digits="0" id="5" name="Details" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
@@ -19,76 +19,58 @@
          <column autoUpdated="false" digits="2" id="7" name="Overname" nullable="true" remarks="" size="100" type="NUMERIC"/>
          <column autoUpdated="false" digits="2" id="8" name="OverigeKosten" nullable="true" remarks="" size="100" type="NUMERIC"/>
          <primaryKey column="ContractID" sequenceNumberInPK="1"/>
-         <index name="SYS_IDX_56" unique="true">
+         <index name="SYS_IDX_415" unique="true">
             <column ascending="true" name="ContractID"/>
          </index>
+         <index name="SYS_IDX_417" unique="false">
+            <column ascending="true" name="RLidID"/>
+         </index>
+         <index name="SYS_IDX_419" unique="false">
+            <column ascending="true" name="RTuinID"/>
+         </index>
       </table>
-      <table name="dcLid" numRows="0" remarks="" schema="PUBLIC" type="VIEW">
-         <column autoUpdated="false" digits="0" id="0" name="NaamR" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="1" name="LidID" nullable="true" remarks="" size="4" type="INTEGER">
-            <parent column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Lid"/>
-         </column>
-         <column autoUpdated="false" digits="0" id="2" name="Naam" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="3" name="Tel." nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="4" name="Aanhef" nullable="true" remarks="" size="20" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="5" name="Voornaam" nullable="true" remarks="" size="200" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="6" name="Tussenvoegsels" nullable="true" remarks="" size="20" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="7" name="Achternaam" nullable="true" remarks="" size="200" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="8" name="Email" nullable="true" remarks="" size="200" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="9" name="Adres" nullable="true" remarks="" size="80" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="10" name="Postcode" nullable="true" remarks="" size="16" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="11" name="Woonplaats" nullable="true" remarks="" size="40" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="12" name="Telefoon" nullable="true" remarks="" size="32" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="13" name="Mobiel" nullable="true" remarks="" size="32" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="14" name="Inschrijving" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="0" id="15" name="Voorkeur" nullable="true" remarks="" size="20" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="16" name="Medetuinder" nullable="true" remarks="" size="1" type="BOOLEAN"/>
-         <column autoUpdated="false" digits="0" id="17" name="Bijzonderheden" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="18" name="Uitschrijving" nullable="true" remarks="" size="8" type="DATE"/>
-      </table>
-      <table name="dcTuinNoordWoord" numRows="0" remarks="" schema="PUBLIC" type="VIEW">
-         <column autoUpdated="false" digits="0" id="0" name="NoordWoord" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="1" name="TuinID" nullable="true" remarks="" size="4" type="INTEGER">
-            <parent column="TuinID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Tuin"/>
-         </column>
-         <column autoUpdated="false" digits="0" id="2" name="Nummer" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="3" name="Noord" nullable="true" remarks="" size="1" type="BOOLEAN"/>
-         <column autoUpdated="false" digits="0" id="4" name="Oppervlakte" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="5" name="TuinBijz" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-      </table>
-      <table name="Facturatie" numRows="4" remarks="" schema="PUBLIC" type="TABLE">
+      <table name="Facturatie" numRows="5" remarks="" schema="PUBLIC" type="TABLE">
          <column autoUpdated="false" digits="0" id="0" name="FacturatieID" nullable="false" remarks="" size="28" type="VARCHAR_IGNORECASE">
-            <child column="FacturatieID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="vwFacturatie"/>
-            <child column="FacturatieID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="vwFacturatieDetail"/>
+            <child column="RFacturatieID" foreignKey="SYS_FK_401" implied="false" onDeleteCascade="false" table="FacturatiePost"/>
          </column>
          <column autoUpdated="false" digits="0" id="1" name="Code" nullable="true" remarks="" size="200" type="VARCHAR"/>
          <column autoUpdated="false" digits="0" id="2" name="Factuurtekst" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
          <primaryKey column="FacturatieID" sequenceNumberInPK="1"/>
-         <index name="SYS_IDX_58" unique="true">
+         <index name="SYS_IDX_421" unique="true">
             <column ascending="true" name="FacturatieID"/>
          </index>
       </table>
-      <table name="FacturatiePost" numRows="11" remarks="" schema="PUBLIC" type="TABLE">
-         <column autoUpdated="false" digits="0" id="0" name="RFacturatieID" nullable="false" remarks="" size="200" type="VARCHAR_IGNORECASE"/>
-         <column autoUpdated="false" digits="0" id="1" name="RKostenpostID" nullable="false" remarks="" size="200" type="VARCHAR"/>
+      <table name="FacturatiePost" numRows="16" remarks="" schema="PUBLIC" type="TABLE">
+         <column autoUpdated="false" digits="0" id="0" name="RFacturatieID" nullable="false" remarks="" size="200" type="VARCHAR_IGNORECASE">
+            <parent column="FacturatieID" foreignKey="SYS_FK_401" implied="false" onDeleteCascade="false" table="Facturatie"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="1" name="RKostenpostID" nullable="false" remarks="" size="200" type="VARCHAR">
+            <parent column="KostenpostID" foreignKey="SYS_FK_404" implied="false" onDeleteCascade="false" table="Kostenpost"/>
+         </column>
          <column autoUpdated="false" digits="0" id="2" name="Volgnummer" nullable="false" remarks="" size="4" type="INTEGER"/>
          <primaryKey column="RFacturatieID" sequenceNumberInPK="1"/>
          <primaryKey column="RKostenpostID" sequenceNumberInPK="2"/>
-         <index name="SYS_IDX_62" unique="true">
+         <index name="SYS_IDX_425" unique="true">
             <column ascending="true" name="RFacturatieID"/>
+            <column ascending="true" name="RKostenpostID"/>
+         </index>
+         <index name="SYS_IDX_427" unique="false">
+            <column ascending="true" name="RFacturatieID"/>
+         </index>
+         <index name="SYS_IDX_429" unique="false">
             <column ascending="true" name="RKostenpostID"/>
          </index>
       </table>
       <table name="filterContract" numRows="1" remarks="" schema="PUBLIC" type="TABLE">
          <column autoUpdated="false" digits="0" id="0" name="FTID" nullable="false" remarks="" size="1" type="BOOLEAN"/>
-         <column autoUpdated="false" digits="0" id="1" name="ContractID" nullable="false" remarks="" size="4" type="INTEGER">
-            <parent column="ContractID" foreignKey="SYS_FK_175" implied="false" onDeleteCascade="false" table="Contract"/>
+         <column autoUpdated="false" digits="0" id="1" name="ContractID" nullable="true" remarks="" size="4" type="INTEGER">
+            <parent column="ContractID" foreignKey="SYS_FK_381" implied="false" onDeleteCascade="false" table="Contract"/>
          </column>
          <primaryKey column="FTID" sequenceNumberInPK="1"/>
-         <index name="SYS_IDX_176" unique="true">
+         <index name="SYS_IDX_441" unique="true">
             <column ascending="true" name="FTID"/>
          </index>
-         <index name="SYS_IDX_178" unique="false">
+         <index name="SYS_IDX_443" unique="false">
             <column ascending="true" name="ContractID"/>
          </index>
       </table>
@@ -98,30 +80,44 @@
             <parent column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Lid"/>
          </column>
          <primaryKey column="FIID" sequenceNumberInPK="1"/>
-         <index name="SYS_IDX_68" unique="true">
+         <index name="SYS_IDX_435" unique="true">
             <column ascending="true" name="FIID"/>
          </index>
       </table>
       <table name="filterKoopFactuur" numRows="1" remarks="" schema="PUBLIC" type="TABLE">
-         <column autoUpdated="false" digits="0" id="0" name="FAID" nullable="false" remarks="" size="1" type="BOOLEAN"/>
+         <column autoUpdated="false" digits="0" id="0" name="FAID" nullable="false" remarks="" size="1" type="BOOLEAN">
+            <child column="FAID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="filterLid"/>
+         </column>
          <column autoUpdated="false" digits="0" id="1" name="LidID" nullable="true" remarks="" size="4" type="INTEGER">
             <parent column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Lid"/>
          </column>
          <primaryKey column="FAID" sequenceNumberInPK="1"/>
-         <index name="SYS_IDX_66" unique="true">
+         <index name="SYS_IDX_433" unique="true">
+            <column ascending="true" name="FAID"/>
+         </index>
+      </table>
+      <table name="filterLid" numRows="1" remarks="" schema="PUBLIC" type="TABLE">
+         <column autoUpdated="false" digits="0" id="0" name="FAID" nullable="false" remarks="" size="1" type="BOOLEAN">
+            <parent column="FAID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="filterKoopFactuur"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="1" name="LidID" nullable="true" remarks="" size="4" type="INTEGER">
+            <parent column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Lid"/>
+         </column>
+         <primaryKey column="FAID" sequenceNumberInPK="1"/>
+         <index name="SYS_IDX_445" unique="true">
             <column ascending="true" name="FAID"/>
          </index>
       </table>
       <table name="filterOpzegging" numRows="1" remarks="" schema="PUBLIC" type="TABLE">
          <column autoUpdated="false" digits="0" id="0" name="FOPID" nullable="false" remarks="" size="1" type="BOOLEAN"/>
          <column autoUpdated="false" digits="0" id="1" name="RContractID" nullable="false" remarks="" size="4" type="INTEGER">
-            <parent column="RContractID" foreignKey="SYS_FK_129" implied="false" onDeleteCascade="false" table="Opzegging"/>
+            <parent column="RContractID" foreignKey="SYS_FK_388" implied="false" onDeleteCascade="false" table="Opzegging"/>
          </column>
          <primaryKey column="FOPID" sequenceNumberInPK="1"/>
-         <index name="SYS_IDX_130" unique="true">
+         <index name="SYS_IDX_437" unique="true">
             <column ascending="true" name="FOPID"/>
          </index>
-         <index name="SYS_IDX_132" unique="false">
+         <index name="SYS_IDX_439" unique="false">
             <column ascending="true" name="RContractID"/>
          </index>
       </table>
@@ -131,110 +127,34 @@
          </column>
          <column autoUpdated="false" digits="0" id="1" name="FDatum" nullable="false" remarks="" size="8" type="DATE"/>
          <column autoUpdated="false" digits="0" id="2" name="VerstuurD" nullable="true" remarks="" size="8" type="DATE"/>
+         <column autoUpdated="false" digits="0" id="3" name="VervalD" nullable="true" remarks="" size="8" type="DATE"/>
+         <column autoUpdated="false" digits="0" id="4" name="HVerstuurD" nullable="true" remarks="" size="8" type="DATE"/>
+         <column autoUpdated="false" digits="0" id="5" name="HVervalD" nullable="true" remarks="" size="8" type="DATE"/>
+         <column autoUpdated="false" digits="0" id="6" name="AVerstuurD" nullable="true" remarks="" size="8" type="DATE"/>
+         <column autoUpdated="false" digits="0" id="7" name="AVervalD" nullable="true" remarks="" size="8" type="DATE"/>
          <primaryKey column="FJID" sequenceNumberInPK="1"/>
-         <index name="SYS_IDX_64" unique="true">
+         <index name="SYS_IDX_431" unique="true">
             <column ascending="true" name="FJID"/>
          </index>
       </table>
-      <table name="jnContractLid" numRows="0" remarks="" schema="PUBLIC" type="VIEW">
-         <column autoUpdated="false" digits="0" id="0" name="NaamR" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="1" name="LidID" nullable="true" remarks="" size="4" type="INTEGER">
-            <parent column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Lid"/>
+      <table name="Kostenpost" numRows="11" remarks="" schema="PUBLIC" type="TABLE">
+         <column autoUpdated="false" digits="0" id="0" name="KostenpostID" nullable="false" remarks="" size="4" type="VARCHAR">
+            <child column="RKostenpostID" foreignKey="SYS_FK_404" implied="false" onDeleteCascade="false" table="FacturatiePost"/>
          </column>
-         <column autoUpdated="false" digits="0" id="2" name="Naam" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="3" name="Tel." nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="4" name="Aanhef" nullable="true" remarks="" size="20" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="5" name="Voornaam" nullable="true" remarks="" size="200" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="6" name="Tussenvoegsels" nullable="true" remarks="" size="20" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="7" name="Achternaam" nullable="true" remarks="" size="200" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="8" name="Email" nullable="true" remarks="" size="200" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="9" name="Adres" nullable="true" remarks="" size="80" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="10" name="Postcode" nullable="true" remarks="" size="16" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="11" name="Woonplaats" nullable="true" remarks="" size="40" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="12" name="Telefoon" nullable="true" remarks="" size="32" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="13" name="Mobiel" nullable="true" remarks="" size="32" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="14" name="Inschrijving" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="0" id="15" name="Voorkeur" nullable="true" remarks="" size="20" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="16" name="Medetuinder" nullable="true" remarks="" size="1" type="BOOLEAN"/>
-         <column autoUpdated="false" digits="0" id="17" name="Bijzonderheden" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="18" name="Uitschrijving" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="0" id="19" name="Lidjaar" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="20" name="ContractID" nullable="true" remarks="" size="4" type="INTEGER">
-            <parent column="ContractID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Contract"/>
-         </column>
-         <column autoUpdated="false" digits="0" id="21" name="RLidID" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="22" name="RTuinID" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="23" name="Ingang" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="2" id="24" name="Borg" nullable="true" remarks="" size="100" type="NUMERIC"/>
-         <column autoUpdated="false" digits="0" id="25" name="Details" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="26" name="ContractBijz" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="2" id="27" name="Overname" nullable="true" remarks="" size="100" type="NUMERIC"/>
-         <column autoUpdated="false" digits="2" id="28" name="OverigeKosten" nullable="true" remarks="" size="100" type="NUMERIC"/>
-      </table>
-      <table name="jnContractLidOpz" numRows="0" remarks="" schema="PUBLIC" type="VIEW">
-         <column autoUpdated="false" digits="0" id="0" name="NaamR" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="1" name="LidID" nullable="true" remarks="" size="4" type="INTEGER">
-            <parent column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Lid"/>
-         </column>
-         <column autoUpdated="false" digits="0" id="2" name="Naam" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="3" name="Tel." nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="4" name="Aanhef" nullable="true" remarks="" size="20" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="5" name="Voornaam" nullable="true" remarks="" size="200" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="6" name="Tussenvoegsels" nullable="true" remarks="" size="20" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="7" name="Achternaam" nullable="true" remarks="" size="200" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="8" name="Email" nullable="true" remarks="" size="200" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="9" name="Adres" nullable="true" remarks="" size="80" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="10" name="Postcode" nullable="true" remarks="" size="16" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="11" name="Woonplaats" nullable="true" remarks="" size="40" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="12" name="Telefoon" nullable="true" remarks="" size="32" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="13" name="Mobiel" nullable="true" remarks="" size="32" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="14" name="Inschrijving" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="0" id="15" name="Voorkeur" nullable="true" remarks="" size="20" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="16" name="Medetuinder" nullable="true" remarks="" size="1" type="BOOLEAN"/>
-         <column autoUpdated="false" digits="0" id="17" name="Bijzonderheden" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="18" name="Uitschrijving" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="0" id="19" name="Lidjaar" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="20" name="ContractID" nullable="true" remarks="" size="4" type="INTEGER">
-            <parent column="ContractID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Contract"/>
-         </column>
-         <column autoUpdated="false" digits="0" id="21" name="RLidID" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="22" name="RTuinID" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="23" name="Ingang" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="2" id="24" name="Borg" nullable="true" remarks="" size="100" type="NUMERIC"/>
-         <column autoUpdated="false" digits="0" id="25" name="Details" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="26" name="ContractBijz" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="2" id="27" name="Overname" nullable="true" remarks="" size="100" type="NUMERIC"/>
-         <column autoUpdated="false" digits="2" id="28" name="OverigeKosten" nullable="true" remarks="" size="100" type="NUMERIC"/>
-         <column autoUpdated="false" digits="0" id="29" name="RContractID" nullable="true" remarks="" size="4" type="INTEGER">
-            <parent column="RContractID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Opzegging"/>
-         </column>
-         <column autoUpdated="false" digits="0" id="30" name="Schoon" nullable="true" remarks="" size="1" type="BOOLEAN"/>
-         <column autoUpdated="false" digits="0" id="31" name="Uitkeren" nullable="true" remarks="" size="1" type="BOOLEAN"/>
-         <column autoUpdated="false" digits="0" id="32" name="Uitgekeerd" nullable="true" remarks="" size="1" type="BOOLEAN"/>
-         <column autoUpdated="false" digits="0" id="33" name="Opmerkingen" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="34" name="Einddatum" nullable="true" remarks="" size="8" type="DATE"/>
-      </table>
-      <table name="Kostenpost" numRows="8" remarks="" schema="PUBLIC" type="TABLE">
-         <column autoUpdated="false" digits="0" id="0" name="KostenpostID" nullable="false" remarks="" size="4" type="VARCHAR"/>
          <column autoUpdated="false" digits="0" id="1" name="Beschrijving" nullable="false" remarks="" size="200" type="VARCHAR"/>
          <column autoUpdated="false" digits="0" id="2" name="Rekening" nullable="true" remarks="" size="510" type="VARCHAR"/>
          <primaryKey column="KostenpostID" sequenceNumberInPK="1"/>
-         <index name="SYS_IDX_60" unique="true">
+         <index name="SYS_IDX_423" unique="true">
             <column ascending="true" name="KostenpostID"/>
          </index>
       </table>
-      <table name="Lid" numRows="154" remarks="" schema="PUBLIC" type="TABLE">
+      <table name="Lid" numRows="155" remarks="" schema="PUBLIC" type="TABLE">
          <column autoUpdated="true" digits="0" id="0" name="LidID" nullable="false" remarks="" size="4" type="INTEGER">
-            <child column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="dcLid"/>
+            <child column="RLidID" foreignKey="SYS_FK_392" implied="false" onDeleteCascade="false" table="Contract"/>
             <child column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="filterInschrijfFactuur"/>
             <child column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="filterKoopFactuur"/>
-            <child column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="jnContractLid"/>
-            <child column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="jnContractLidOpz"/>
-            <child column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="luVrijLid"/>
-            <child column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="vwContract"/>
-            <child column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="vwLid"/>
-            <child column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="vwLopendContract"/>
-            <child column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="vwTuinenLijst"/>
+            <child column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="filterLid"/>
+            <child column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="vwFilterLid"/>
          </column>
          <column autoUpdated="false" digits="0" id="1" name="Aanhef" nullable="true" remarks="" size="20" type="VARCHAR"/>
          <column autoUpdated="false" digits="0" id="2" name="Voornaam" nullable="false" remarks="" size="200" type="VARCHAR"/>
@@ -260,19 +180,9 @@
          <column autoUpdated="false" digits="0" id="0" name="Lidjaar" nullable="true" remarks="" size="4" type="INTEGER"/>
          <column autoUpdated="false" digits="0" id="1" name="RLidID" nullable="true" remarks="" size="4" type="INTEGER"/>
       </table>
-      <table name="luVrijLid" numRows="0" remarks="" schema="PUBLIC" type="VIEW">
-         <column autoUpdated="false" digits="0" id="0" name="Naam" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="1" name="LidID" nullable="true" remarks="" size="4" type="INTEGER">
-            <parent column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Lid"/>
-         </column>
-      </table>
-      <table name="Opzegging" numRows="5" remarks="" schema="PUBLIC" type="TABLE">
+      <table name="Opzegging" numRows="10" remarks="" schema="PUBLIC" type="TABLE">
          <column autoUpdated="false" digits="0" id="0" name="RContractID" nullable="false" remarks="" size="4" type="INTEGER">
-            <child column="RContractID" foreignKey="SYS_FK_129" implied="false" onDeleteCascade="false" table="filterOpzegging"/>
-            <child column="RContractID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="jnContractLidOpz"/>
-            <child column="RContractID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="vwContract"/>
-            <child column="RContractID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="vwLopendContract"/>
-            <child column="RContractID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="vwTuinenLijst"/>
+            <child column="RContractID" foreignKey="SYS_FK_388" implied="false" onDeleteCascade="false" table="filterOpzegging"/>
          </column>
          <column autoUpdated="false" digits="0" id="1" name="Schoon" nullable="true" remarks="" size="1" type="BOOLEAN"/>
          <column autoUpdated="false" digits="0" id="2" name="Uitkeren" nullable="true" remarks="" size="1" type="BOOLEAN"/>
@@ -280,8 +190,9 @@
          <column autoUpdated="false" digits="0" id="4" name="Opmerkingen" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
          <column autoUpdated="false" digits="0" id="5" name="Einddatum" nullable="false" remarks="" size="8" type="DATE"/>
          <column autoUpdated="false" digits="2" id="6" name="OvernamEind" nullable="true" remarks="" size="100" type="NUMERIC"/>
+         <column autoUpdated="false" digits="0" id="7" name="Taxatiedatum" nullable="true" remarks="" size="8" type="DATE"/>
          <primaryKey column="RContractID" sequenceNumberInPK="1"/>
-         <index name="SYS_IDX_54" unique="true">
+         <index name="SYS_IDX_413" unique="true">
             <column ascending="true" name="RContractID"/>
          </index>
       </table>
@@ -289,14 +200,20 @@
          <column autoUpdated="false" digits="0" id="0" name="PrijsID" nullable="false" remarks="" size="1" type="BOOLEAN">
             <child column="PrijsID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="vwTarief"/>
          </column>
-         <column autoUpdated="false" digits="0" id="1" name="RTariefID" nullable="false" remarks="" size="4" type="INTEGER"/>
+         <column autoUpdated="false" digits="0" id="1" name="RTariefID" nullable="false" remarks="" size="4" type="INTEGER">
+            <parent column="TariefID" foreignKey="SYS_FK_408" implied="false" onDeleteCascade="false" table="Tarief"/>
+         </column>
          <primaryKey column="PrijsID" sequenceNumberInPK="1"/>
-         <index name="SYS_IDX_52" unique="true">
+         <index name="SYS_IDX_409" unique="true">
             <column ascending="true" name="PrijsID"/>
+         </index>
+         <index name="SYS_IDX_411" unique="false">
+            <column ascending="true" name="RTariefID"/>
          </index>
       </table>
       <table name="Tarief" numRows="1" remarks="" schema="PUBLIC" type="TABLE">
          <column autoUpdated="true" digits="0" id="0" name="TariefID" nullable="false" remarks="" size="4" type="INTEGER">
+            <child column="RTariefID" foreignKey="SYS_FK_408" implied="false" onDeleteCascade="false" table="Prijs"/>
             <child column="TariefID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="vwTarief"/>
          </column>
          <column autoUpdated="false" digits="2" id="1" name="AspContrib" nullable="false" remarks="" size="100" type="NUMERIC"/>
@@ -306,19 +223,19 @@
          <column autoUpdated="false" digits="2" id="5" name="BijdrageMin" nullable="false" remarks="" size="10" type="NUMERIC"/>
          <column autoUpdated="false" digits="2" id="6" name="BijdrageMax" nullable="false" remarks="" size="100" type="NUMERIC"/>
          <column autoUpdated="false" digits="2" id="7" name="AspAdmin" nullable="true" remarks="" size="100" type="NUMERIC"/>
+         <column autoUpdated="false" digits="2" id="8" name="Boete" nullable="true" remarks="" size="100" type="NUMERIC"/>
+         <column autoUpdated="false" digits="0" id="9" name="Portokosten" nullable="true" remarks="" size="100" type="NUMERIC"/>
+         <column autoUpdated="false" digits="0" id="10" name="AdminstratieKosten" nullable="true" remarks="" size="100" type="NUMERIC"/>
+         <column autoUpdated="false" digits="2" id="11" name="AdmKosten" nullable="true" remarks="" size="100" type="NUMERIC"/>
+         <column autoUpdated="false" digits="2" id="12" name="Aangetekend" nullable="true" remarks="" size="100" type="NUMERIC"/>
          <primaryKey column="TariefID" sequenceNumberInPK="1"/>
          <index name="SYS_IDX_50" unique="true">
             <column ascending="true" name="TariefID"/>
          </index>
       </table>
-      <table name="Tuin" numRows="124" remarks="" schema="PUBLIC" type="TABLE">
+      <table name="Tuin" numRows="123" remarks="" schema="PUBLIC" type="TABLE">
          <column autoUpdated="true" digits="0" id="0" name="TuinID" nullable="false" remarks="" size="4" type="INTEGER">
-            <child column="TuinID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="dcTuinNoordWoord"/>
-            <child column="TuinID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="vwContract"/>
-            <child column="TuinID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="vwLopendContract"/>
-            <child column="TuinID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="vwTuin"/>
-            <child column="TuinID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="vwTuinenLijst"/>
-            <child column="TuinID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="vwVrijeTuin"/>
+            <child column="RTuinID" foreignKey="SYS_FK_397" implied="false" onDeleteCascade="false" table="Contract"/>
          </column>
          <column autoUpdated="false" digits="0" id="1" name="Nummer" nullable="true" remarks="" size="4" type="INTEGER"/>
          <column autoUpdated="false" digits="0" id="2" name="Noord" nullable="true" remarks="" size="1" type="BOOLEAN"/>
@@ -329,85 +246,15 @@
             <column ascending="true" name="TuinID"/>
          </index>
       </table>
-      <table name="vwContract" numRows="0" remarks="" schema="PUBLIC" type="VIEW">
-         <column autoUpdated="false" digits="0" id="0" name="TuinNaam" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="1" name="NoordLetter" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="2" name="Kort" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="3" name="TuinCode" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="4" name="NoordWoord" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="5" name="TuinID" nullable="true" remarks="" size="4" type="INTEGER">
-            <parent column="TuinID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Tuin"/>
-         </column>
-         <column autoUpdated="false" digits="0" id="6" name="Nummer" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="7" name="Noord" nullable="true" remarks="" size="1" type="BOOLEAN"/>
-         <column autoUpdated="false" digits="0" id="8" name="Oppervlakte" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="9" name="TuinBijz" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="10" name="NaamR" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="11" name="LidID" nullable="true" remarks="" size="4" type="INTEGER">
-            <parent column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Lid"/>
-         </column>
-         <column autoUpdated="false" digits="0" id="12" name="Naam" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="13" name="Tel." nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="14" name="Aanhef" nullable="true" remarks="" size="20" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="15" name="Voornaam" nullable="true" remarks="" size="200" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="16" name="Tussenvoegsels" nullable="true" remarks="" size="20" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="17" name="Achternaam" nullable="true" remarks="" size="200" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="18" name="Email" nullable="true" remarks="" size="200" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="19" name="Adres" nullable="true" remarks="" size="80" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="20" name="Postcode" nullable="true" remarks="" size="16" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="21" name="Woonplaats" nullable="true" remarks="" size="40" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="22" name="Telefoon" nullable="true" remarks="" size="32" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="23" name="Mobiel" nullable="true" remarks="" size="32" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="24" name="Inschrijving" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="0" id="25" name="Voorkeur" nullable="true" remarks="" size="20" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="26" name="Medetuinder" nullable="true" remarks="" size="1" type="BOOLEAN"/>
-         <column autoUpdated="false" digits="0" id="27" name="Bijzonderheden" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="28" name="Uitschrijving" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="0" id="29" name="Lidjaar" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="30" name="ContractID" nullable="true" remarks="" size="4" type="INTEGER">
+      <table name="vwFilterContract" numRows="0" remarks="" schema="PUBLIC" type="VIEW">
+         <column autoUpdated="false" digits="0" id="0" name="ContractID" nullable="true" remarks="" size="4" type="INTEGER">
             <parent column="ContractID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Contract"/>
          </column>
-         <column autoUpdated="false" digits="0" id="31" name="RLidID" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="32" name="RTuinID" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="33" name="Ingang" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="2" id="34" name="Borg" nullable="true" remarks="" size="100" type="NUMERIC"/>
-         <column autoUpdated="false" digits="0" id="35" name="Details" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="36" name="ContractBijz" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="2" id="37" name="Overname" nullable="true" remarks="" size="100" type="NUMERIC"/>
-         <column autoUpdated="false" digits="2" id="38" name="OverigeKosten" nullable="true" remarks="" size="100" type="NUMERIC"/>
-         <column autoUpdated="false" digits="0" id="39" name="RContractID" nullable="true" remarks="" size="4" type="INTEGER">
-            <parent column="RContractID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Opzegging"/>
-         </column>
-         <column autoUpdated="false" digits="0" id="40" name="Schoon" nullable="true" remarks="" size="1" type="BOOLEAN"/>
-         <column autoUpdated="false" digits="0" id="41" name="Uitkeren" nullable="true" remarks="" size="1" type="BOOLEAN"/>
-         <column autoUpdated="false" digits="0" id="42" name="Uitgekeerd" nullable="true" remarks="" size="1" type="BOOLEAN"/>
-         <column autoUpdated="false" digits="0" id="43" name="Opmerkingen" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="44" name="Einddatum" nullable="true" remarks="" size="8" type="DATE"/>
       </table>
-      <table name="vwFacturatie" numRows="0" remarks="" schema="PUBLIC" type="VIEW">
-         <column autoUpdated="false" digits="0" id="0" name="FacturatieID" nullable="true" remarks="" size="28" type="VARCHAR_IGNORECASE">
-            <parent column="FacturatieID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Facturatie"/>
+      <table name="vwFilterLid" numRows="0" remarks="" schema="PUBLIC" type="VIEW">
+         <column autoUpdated="false" digits="0" id="0" name="LidID" nullable="true" remarks="" size="4" type="INTEGER">
+            <parent column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Lid"/>
          </column>
-         <column autoUpdated="false" digits="0" id="1" name="Code" nullable="true" remarks="" size="200" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="2" name="FDatum" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="0" id="3" name="VerstuurD" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="0" id="4" name="Jaar" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="5" name="Naam" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="6" name="Factuurtekst" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-      </table>
-      <table name="vwFacturatieDetail" numRows="0" remarks="" schema="PUBLIC" type="VIEW">
-         <column autoUpdated="false" digits="0" id="0" name="FacturatieID" nullable="true" remarks="" size="28" type="VARCHAR_IGNORECASE">
-            <parent column="FacturatieID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Facturatie"/>
-         </column>
-         <column autoUpdated="false" digits="0" id="1" name="Code" nullable="true" remarks="" size="200" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="2" name="FDatum" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="0" id="3" name="VerstuurD" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="0" id="4" name="Jaar" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="5" name="Naam" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="6" name="Factuurtekst" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="7" name="Volgnummer" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="8" name="Beschrijving" nullable="true" remarks="" size="200" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="9" name="Rekening" nullable="true" remarks="" size="510" type="VARCHAR"/>
       </table>
       <table name="vwFJaar" numRows="0" remarks="" schema="PUBLIC" type="VIEW">
          <column autoUpdated="false" digits="0" id="0" name="FJID" nullable="true" remarks="" size="1" type="BOOLEAN">
@@ -415,87 +262,13 @@
          </column>
          <column autoUpdated="false" digits="0" id="1" name="FDatum" nullable="true" remarks="" size="8" type="DATE"/>
          <column autoUpdated="false" digits="0" id="2" name="VerstuurD" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="0" id="3" name="Jaar" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="4" name="JaarCode" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-      </table>
-      <table name="vwLid" numRows="0" remarks="" schema="PUBLIC" type="VIEW">
-         <column autoUpdated="false" digits="0" id="0" name="NaamR" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="1" name="LidID" nullable="true" remarks="" size="4" type="INTEGER">
-            <parent column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Lid"/>
-         </column>
-         <column autoUpdated="false" digits="0" id="2" name="Naam" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="3" name="Tel." nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="4" name="Aanhef" nullable="true" remarks="" size="20" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="5" name="Voornaam" nullable="true" remarks="" size="200" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="6" name="Tussenvoegsels" nullable="true" remarks="" size="20" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="7" name="Achternaam" nullable="true" remarks="" size="200" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="8" name="Email" nullable="true" remarks="" size="200" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="9" name="Adres" nullable="true" remarks="" size="80" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="10" name="Postcode" nullable="true" remarks="" size="16" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="11" name="Woonplaats" nullable="true" remarks="" size="40" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="12" name="Telefoon" nullable="true" remarks="" size="32" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="13" name="Mobiel" nullable="true" remarks="" size="32" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="14" name="Inschrijving" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="0" id="15" name="Voorkeur" nullable="true" remarks="" size="20" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="16" name="Medetuinder" nullable="true" remarks="" size="1" type="BOOLEAN"/>
-         <column autoUpdated="false" digits="0" id="17" name="Bijzonderheden" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="18" name="Uitschrijving" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="0" id="19" name="Lidjaar" nullable="true" remarks="" size="4" type="INTEGER"/>
-      </table>
-      <table name="vwLopendContract" numRows="0" remarks="" schema="PUBLIC" type="VIEW">
-         <column autoUpdated="false" digits="0" id="0" name="TuinNaam" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="1" name="NoordLetter" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="2" name="Kort" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="3" name="TuinCode" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="4" name="NoordWoord" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="5" name="TuinID" nullable="true" remarks="" size="4" type="INTEGER">
-            <parent column="TuinID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Tuin"/>
-         </column>
-         <column autoUpdated="false" digits="0" id="6" name="Nummer" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="7" name="Noord" nullable="true" remarks="" size="1" type="BOOLEAN"/>
-         <column autoUpdated="false" digits="0" id="8" name="Oppervlakte" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="9" name="TuinBijz" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="10" name="NaamR" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="11" name="LidID" nullable="true" remarks="" size="4" type="INTEGER">
-            <parent column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Lid"/>
-         </column>
-         <column autoUpdated="false" digits="0" id="12" name="Naam" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="13" name="Tel." nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="14" name="Aanhef" nullable="true" remarks="" size="20" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="15" name="Voornaam" nullable="true" remarks="" size="200" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="16" name="Tussenvoegsels" nullable="true" remarks="" size="20" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="17" name="Achternaam" nullable="true" remarks="" size="200" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="18" name="Email" nullable="true" remarks="" size="200" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="19" name="Adres" nullable="true" remarks="" size="80" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="20" name="Postcode" nullable="true" remarks="" size="16" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="21" name="Woonplaats" nullable="true" remarks="" size="40" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="22" name="Telefoon" nullable="true" remarks="" size="32" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="23" name="Mobiel" nullable="true" remarks="" size="32" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="24" name="Inschrijving" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="0" id="25" name="Voorkeur" nullable="true" remarks="" size="20" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="26" name="Medetuinder" nullable="true" remarks="" size="1" type="BOOLEAN"/>
-         <column autoUpdated="false" digits="0" id="27" name="Bijzonderheden" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="28" name="Uitschrijving" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="0" id="29" name="Lidjaar" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="30" name="ContractID" nullable="true" remarks="" size="4" type="INTEGER">
-            <parent column="ContractID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Contract"/>
-         </column>
-         <column autoUpdated="false" digits="0" id="31" name="RLidID" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="32" name="RTuinID" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="33" name="Ingang" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="2" id="34" name="Borg" nullable="true" remarks="" size="100" type="NUMERIC"/>
-         <column autoUpdated="false" digits="0" id="35" name="Details" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="36" name="ContractBijz" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="2" id="37" name="Overname" nullable="true" remarks="" size="100" type="NUMERIC"/>
-         <column autoUpdated="false" digits="2" id="38" name="OverigeKosten" nullable="true" remarks="" size="100" type="NUMERIC"/>
-         <column autoUpdated="false" digits="0" id="39" name="RContractID" nullable="true" remarks="" size="4" type="INTEGER">
-            <parent column="RContractID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Opzegging"/>
-         </column>
-         <column autoUpdated="false" digits="0" id="40" name="Schoon" nullable="true" remarks="" size="1" type="BOOLEAN"/>
-         <column autoUpdated="false" digits="0" id="41" name="Uitkeren" nullable="true" remarks="" size="1" type="BOOLEAN"/>
-         <column autoUpdated="false" digits="0" id="42" name="Uitgekeerd" nullable="true" remarks="" size="1" type="BOOLEAN"/>
-         <column autoUpdated="false" digits="0" id="43" name="Opmerkingen" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="44" name="Einddatum" nullable="true" remarks="" size="8" type="DATE"/>
+         <column autoUpdated="false" digits="0" id="3" name="VervalD" nullable="true" remarks="" size="8" type="DATE"/>
+         <column autoUpdated="false" digits="0" id="4" name="HVerstuurD" nullable="true" remarks="" size="8" type="DATE"/>
+         <column autoUpdated="false" digits="0" id="5" name="HVervalD" nullable="true" remarks="" size="8" type="DATE"/>
+         <column autoUpdated="false" digits="0" id="6" name="AVerstuurD" nullable="true" remarks="" size="8" type="DATE"/>
+         <column autoUpdated="false" digits="0" id="7" name="AVervalD" nullable="true" remarks="" size="8" type="DATE"/>
+         <column autoUpdated="false" digits="0" id="8" name="Jaar" nullable="true" remarks="" size="4" type="INTEGER"/>
+         <column autoUpdated="false" digits="0" id="9" name="JaarCode" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
       </table>
       <table name="vwTarief" numRows="0" remarks="" schema="PUBLIC" type="VIEW">
          <column autoUpdated="false" digits="0" id="0" name="PrijsID" nullable="true" remarks="" size="1" type="BOOLEAN">
@@ -512,89 +285,9 @@
          <column autoUpdated="false" digits="2" id="7" name="BijdrageMin" nullable="true" remarks="" size="10" type="NUMERIC"/>
          <column autoUpdated="false" digits="2" id="8" name="BijdrageMax" nullable="true" remarks="" size="100" type="NUMERIC"/>
          <column autoUpdated="false" digits="2" id="9" name="AspAdmin" nullable="true" remarks="" size="100" type="NUMERIC"/>
-      </table>
-      <table name="vwTuin" numRows="0" remarks="" schema="PUBLIC" type="VIEW">
-         <column autoUpdated="false" digits="0" id="0" name="TuinNaam" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="1" name="NoordLetter" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="2" name="Kort" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="3" name="TuinCode" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="4" name="NoordWoord" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="5" name="TuinID" nullable="true" remarks="" size="4" type="INTEGER">
-            <parent column="TuinID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Tuin"/>
-         </column>
-         <column autoUpdated="false" digits="0" id="6" name="Nummer" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="7" name="Noord" nullable="true" remarks="" size="1" type="BOOLEAN"/>
-         <column autoUpdated="false" digits="0" id="8" name="Oppervlakte" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="9" name="TuinBijz" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-      </table>
-      <table name="vwTuinenLijst" numRows="0" remarks="" schema="PUBLIC" type="VIEW">
-         <column autoUpdated="false" digits="0" id="0" name="TuinNaam" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="1" name="NoordLetter" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="2" name="Kort" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="3" name="TuinCode" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="4" name="NoordWoord" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="5" name="TuinID" nullable="true" remarks="" size="4" type="INTEGER">
-            <parent column="TuinID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Tuin"/>
-         </column>
-         <column autoUpdated="false" digits="0" id="6" name="Nummer" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="7" name="Noord" nullable="true" remarks="" size="1" type="BOOLEAN"/>
-         <column autoUpdated="false" digits="0" id="8" name="Oppervlakte" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="9" name="TuinBijz" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="10" name="NaamR" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="11" name="LidID" nullable="true" remarks="" size="4" type="INTEGER">
-            <parent column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Lid"/>
-         </column>
-         <column autoUpdated="false" digits="0" id="12" name="Naam" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="13" name="Tel." nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="14" name="Aanhef" nullable="true" remarks="" size="20" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="15" name="Voornaam" nullable="true" remarks="" size="200" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="16" name="Tussenvoegsels" nullable="true" remarks="" size="20" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="17" name="Achternaam" nullable="true" remarks="" size="200" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="18" name="Email" nullable="true" remarks="" size="200" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="19" name="Adres" nullable="true" remarks="" size="80" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="20" name="Postcode" nullable="true" remarks="" size="16" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="21" name="Woonplaats" nullable="true" remarks="" size="40" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="22" name="Telefoon" nullable="true" remarks="" size="32" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="23" name="Mobiel" nullable="true" remarks="" size="32" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="24" name="Inschrijving" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="0" id="25" name="Voorkeur" nullable="true" remarks="" size="20" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="26" name="Medetuinder" nullable="true" remarks="" size="1" type="BOOLEAN"/>
-         <column autoUpdated="false" digits="0" id="27" name="Bijzonderheden" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="28" name="Uitschrijving" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="0" id="29" name="Lidjaar" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="30" name="ContractID" nullable="true" remarks="" size="4" type="INTEGER">
-            <parent column="ContractID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Contract"/>
-         </column>
-         <column autoUpdated="false" digits="0" id="31" name="RLidID" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="32" name="RTuinID" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="33" name="Ingang" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="2" id="34" name="Borg" nullable="true" remarks="" size="100" type="NUMERIC"/>
-         <column autoUpdated="false" digits="0" id="35" name="Details" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="36" name="ContractBijz" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="2" id="37" name="Overname" nullable="true" remarks="" size="100" type="NUMERIC"/>
-         <column autoUpdated="false" digits="2" id="38" name="OverigeKosten" nullable="true" remarks="" size="100" type="NUMERIC"/>
-         <column autoUpdated="false" digits="0" id="39" name="RContractID" nullable="true" remarks="" size="4" type="INTEGER">
-            <parent column="RContractID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Opzegging"/>
-         </column>
-         <column autoUpdated="false" digits="0" id="40" name="Schoon" nullable="true" remarks="" size="1" type="BOOLEAN"/>
-         <column autoUpdated="false" digits="0" id="41" name="Uitkeren" nullable="true" remarks="" size="1" type="BOOLEAN"/>
-         <column autoUpdated="false" digits="0" id="42" name="Uitgekeerd" nullable="true" remarks="" size="1" type="BOOLEAN"/>
-         <column autoUpdated="false" digits="0" id="43" name="Opmerkingen" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="44" name="Einddatum" nullable="true" remarks="" size="8" type="DATE"/>
-      </table>
-      <table name="vwVrijeTuin" numRows="0" remarks="" schema="PUBLIC" type="VIEW">
-         <column autoUpdated="false" digits="0" id="0" name="TuinNaam" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="1" name="NoordWoord" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
-         <column autoUpdated="false" digits="0" id="2" name="NoordLetter" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="3" name="Kort" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="4" name="TuinCode" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-         <column autoUpdated="false" digits="0" id="5" name="TuinID" nullable="true" remarks="" size="4" type="INTEGER">
-            <parent column="TuinID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Tuin"/>
-         </column>
-         <column autoUpdated="false" digits="0" id="6" name="Nummer" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="7" name="Noord" nullable="true" remarks="" size="1" type="BOOLEAN"/>
-         <column autoUpdated="false" digits="0" id="8" name="Oppervlakte" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="9" name="TuinBijz" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
+         <column autoUpdated="false" digits="2" id="10" name="Boete" nullable="true" remarks="" size="100" type="NUMERIC"/>
+         <column autoUpdated="false" digits="2" id="11" name="Aangetekend" nullable="true" remarks="" size="100" type="NUMERIC"/>
+         <column autoUpdated="false" digits="2" id="12" name="AdmKosten" nullable="true" remarks="" size="100" type="NUMERIC"/>
       </table>
    </tables>
 </database>

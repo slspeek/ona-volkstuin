@@ -24,11 +24,36 @@ digraph "compactRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">Contract</TD></TR>
       <TR><TD PORT="ContractID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ContractID</TD></TR>
+      <TR><TD PORT="RLidID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">RLidID</TD></TR>
+      <TR><TD PORT="RTuinID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">RTuinID</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">126 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">133 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
     </TABLE>>
     URL="tables/Contract.html"
     tooltip="Contract"
+  ];
+  "Facturatie" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">Facturatie</TD></TR>
+      <TR><TD PORT="FacturatieID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">FacturatieID</TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">5 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
+    </TABLE>>
+    URL="tables/Facturatie.html"
+    tooltip="Facturatie"
+  ];
+  "FacturatiePost" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">FacturatiePost</TD></TR>
+      <TR><TD PORT="RFacturatieID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">RFacturatieID</TD></TR>
+      <TR><TD PORT="RKostenpostID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">RKostenpostID</TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">16 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
+    </TABLE>>
+    URL="tables/FacturatiePost.html"
+    tooltip="FacturatiePost"
   ];
   "filterContract" [
     label=<
@@ -52,17 +77,77 @@ digraph "compactRelationshipsDiagram" {
     URL="tables/filterOpzegging.html"
     tooltip="filterOpzegging"
   ];
+  "Kostenpost" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">Kostenpost</TD></TR>
+      <TR><TD PORT="KostenpostID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">KostenpostID</TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">11 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
+    </TABLE>>
+    URL="tables/Kostenpost.html"
+    tooltip="Kostenpost"
+  ];
+  "Lid" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">Lid</TD></TR>
+      <TR><TD PORT="LidID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">LidID</TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">155 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
+    </TABLE>>
+    URL="tables/Lid.html"
+    tooltip="Lid"
+  ];
   "Opzegging" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">Opzegging</TD></TR>
       <TR><TD PORT="RContractID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">RContractID</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">5 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">10 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
     </TABLE>>
     URL="tables/Opzegging.html"
     tooltip="Opzegging"
   ];
+  "Prijs" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">Prijs</TD></TR>
+      <TR><TD PORT="PrijsID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">PrijsID</TD></TR>
+      <TR><TD PORT="RTariefID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">RTariefID</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 row</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
+    </TABLE>>
+    URL="tables/Prijs.html"
+    tooltip="Prijs"
+  ];
+  "Tarief" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">Tarief</TD></TR>
+      <TR><TD PORT="TariefID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">TariefID</TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 row</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
+    </TABLE>>
+    URL="tables/Tarief.html"
+    tooltip="Tarief"
+  ];
+  "Tuin" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">Tuin</TD></TR>
+      <TR><TD PORT="TuinID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">TuinID</TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">123 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
+    </TABLE>>
+    URL="tables/Tuin.html"
+    tooltip="Tuin"
+  ];
+  "Contract":"RLidID":w -> "Lid":"LidID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "Contract":"RTuinID":w -> "Tuin":"TuinID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "FacturatiePost":"RFacturatieID":w -> "Facturatie":"FacturatieID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "FacturatiePost":"RKostenpostID":w -> "Kostenpost":"KostenpostID":e [arrowhead=none dir=back arrowtail=crowodot];
   "filterContract":"ContractID":w -> "Contract":"ContractID":e [arrowhead=none dir=back arrowtail=crowodot];
   "filterOpzegging":"RContractID":w -> "Opzegging":"RContractID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "Prijs":"RTariefID":w -> "Tarief":"TariefID":e [arrowhead=none dir=back arrowtail=crowodot];
 }

@@ -27,6 +27,11 @@ digraph "impliedTwoDegreesRelationshipsDiagram" {
       <TR><TD PORT="FJID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">FJID</TD></TR>
       <TR><TD PORT="FDatum" COLSPAN="3" ALIGN="LEFT">FDatum</TD></TR>
       <TR><TD PORT="VerstuurD" COLSPAN="3" ALIGN="LEFT">VerstuurD</TD></TR>
+      <TR><TD PORT="VervalD" COLSPAN="3" ALIGN="LEFT">VervalD</TD></TR>
+      <TR><TD PORT="HVerstuurD" COLSPAN="3" ALIGN="LEFT">HVerstuurD</TD></TR>
+      <TR><TD PORT="HVervalD" COLSPAN="3" ALIGN="LEFT">HVervalD</TD></TR>
+      <TR><TD PORT="AVerstuurD" COLSPAN="3" ALIGN="LEFT">AVerstuurD</TD></TR>
+      <TR><TD PORT="AVervalD" COLSPAN="3" ALIGN="LEFT">AVervalD</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 row</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
     </TABLE>>
     URL="FJaar.html"
@@ -39,6 +44,11 @@ digraph "impliedTwoDegreesRelationshipsDiagram" {
       <TR><TD PORT="FJID" COLSPAN="2" ALIGN="LEFT">FJID</TD><TD PORT="FJID.type" ALIGN="LEFT">boolean[1]</TD></TR>
       <TR><TD PORT="FDatum" COLSPAN="2" ALIGN="LEFT">FDatum</TD><TD PORT="FDatum.type" ALIGN="LEFT">date[8]</TD></TR>
       <TR><TD PORT="VerstuurD" COLSPAN="2" ALIGN="LEFT">VerstuurD</TD><TD PORT="VerstuurD.type" ALIGN="LEFT">date[8]</TD></TR>
+      <TR><TD PORT="VervalD" COLSPAN="2" ALIGN="LEFT">VervalD</TD><TD PORT="VervalD.type" ALIGN="LEFT">date[8]</TD></TR>
+      <TR><TD PORT="HVerstuurD" COLSPAN="2" ALIGN="LEFT">HVerstuurD</TD><TD PORT="HVerstuurD.type" ALIGN="LEFT">date[8]</TD></TR>
+      <TR><TD PORT="HVervalD" COLSPAN="2" ALIGN="LEFT">HVervalD</TD><TD PORT="HVervalD.type" ALIGN="LEFT">date[8]</TD></TR>
+      <TR><TD PORT="AVerstuurD" COLSPAN="2" ALIGN="LEFT">AVerstuurD</TD><TD PORT="AVerstuurD.type" ALIGN="LEFT">date[8]</TD></TR>
+      <TR><TD PORT="AVervalD" COLSPAN="2" ALIGN="LEFT">AVervalD</TD><TD PORT="AVervalD.type" ALIGN="LEFT">date[8]</TD></TR>
       <TR><TD PORT="Jaar" COLSPAN="2" ALIGN="LEFT">Jaar</TD><TD PORT="Jaar.type" ALIGN="LEFT">integer[4]</TD></TR>
       <TR><TD PORT="JaarCode" COLSPAN="2" ALIGN="LEFT">JaarCode</TD><TD PORT="JaarCode.type" ALIGN="LEFT">varchar[2147483647]</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">view</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">0 &gt;</TD></TR>

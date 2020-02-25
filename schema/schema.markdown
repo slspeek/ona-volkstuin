@@ -2,6 +2,7 @@
 layout: page
 permalink: /schema/
 ---
+Om de ledenadminstratie en facturatie van de volkstuinvereniging te organiseren heb ik gekozen voor een open-source database en boekhoudprogramma. Als database en wordprocessor [LibreOffice](https://libreoffice.org) en als boekhoudprogramma [GNUCash](https://gnucash.org).
 
 Dit is het schema van de samenwerking van [GNUCash](https://gnucash.org) en
 [LibreOffice](https://libreoffice.org).

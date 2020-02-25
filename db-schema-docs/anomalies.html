@@ -73,9 +73,17 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
   <td class='detail'><a href='tables/filterKoopFactuur.html'>filterKoopFactuur</a>.LidID</td>
   <td class='detail'><a href='tables/Lid.html'>Lid</a>.LidID</td>
  </tr>
+ <tr>
+  <td class='detail'><a href='tables/filterLid.html'>filterLid</a>.FAID</td>
+  <td class='detail'><a href='tables/filterKoopFactuur.html'>filterKoopFactuur</a>.FAID</td>
+ </tr>
+ <tr>
+  <td class='detail'><a href='tables/filterLid.html'>filterLid</a>.LidID</td>
+  <td class='detail'><a href='tables/Lid.html'>Lid</a>.LidID</td>
+ </tr>
 </tbody>
 </table>
-2 instances of anomaly detected<p></li>
+4 instances of anomaly detected<p></li>
 <li>
 <b>Tables without indexes:</b>
 <br>Anomaly not detected<p></li>
@@ -83,7 +91,25 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <b>Columns that are flagged as both 'nullable' and 'must be unique':</b>
 <br>Anomaly not detected<p></li>
 <li>
-<b>Tables that contain a single column:</b><br>Anomaly not detected<p></li>
+<b>Tables that contain a single column:</b><table class='dataTable' border='1' rules='groups'>
+<colgroup>
+<colgroup>
+<thead align='left'>
+<tr>
+  <th>Table</th>
+  <th>Column</th>
+</tr>
+</thead>
+<tbody>
+ <tr>
+  <td class='detail'><a href='tables/vwFilterContract.html'>vwFilterContract</a></td><td class='detail'>ContractID</td>
+ </tr>
+ <tr>
+  <td class='detail'><a href='tables/vwFilterLid.html'>vwFilterLid</a></td><td class='detail'>LidID</td>
+ </tr>
+</tbody>
+</table>
+2 instances of anomaly detected<p></li>
 <li>
 <b>Tables with incrementing column names, potentially indicating denormalization:</b>
 <br>Anomaly not detected<p></li>

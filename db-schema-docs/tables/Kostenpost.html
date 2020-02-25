@@ -101,18 +101,27 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </tr>
 </thead>
 <tbody valign='top'>
-<tr class='even'>
+<tr class='odd'>
  <td class='primaryKey' title='Primary Key'>KostenpostID</td>
  <td class='detail'>varchar</td>
  <td class='detail' align='right'>4</td>
  <td class='detail' align='center'></td>
  <td class='detail' align='center'></td>
  <td class='detail'></td>
- <td class='detail'></td>
+ <td class='detail'>
+  <table border='0' width='100%' cellspacing='0' cellpadding='0'>
+   <tr class='relative odd' valign='top'>
+    <td class='relatedTable detail' title="FacturatiePost.RKostenpostID refs Kostenpost.KostenpostID via SYS_FK_404"><a href='FacturatiePost.html'>FacturatiePost</a><span class='relatedKey'>.RKostenpostID</span>
+    </td>
+    <td class='constraint detail'>SYS_FK_404<span title='Null on delete:
+ Foreign key to parent set to NULL when parent deleted'>&nbsp;N</span></td>
+   </tr>
+  </table>
+</td>
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
-<tr class='odd'>
+<tr class='even'>
  <td class='detail'>Beschrijving</td>
  <td class='detail'>varchar</td>
  <td class='detail' align='right'>200</td>
@@ -123,7 +132,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
-<tr class='even'>
+<tr class='odd'>
  <td class='detail'>Rekening</td>
  <td class='detail'>varchar</td>
  <td class='detail' align='right'>510</td>
@@ -135,7 +144,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='comment detail'></td>
 </tr>
 </table>
-<p title='3 columns'>Table contained 8 rows at vr nov. 08 00:08 CET 2019<p/>
+<p title='3 columns'>Table contained 11 rows at di feb. 25 21:26 CET 2020<p/>
 </td></tr></table>
 <div class='indent'>
 <b>Indexes:</b>
@@ -153,10 +162,26 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
   <td class='indexedColumn'>KostenpostID</td>
   <td class='detail'>Must be unique</td>
   <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
-  <td class='constraint' style='text-align:left;'>SYS_IDX_60</td>
+  <td class='constraint' style='text-align:left;'>SYS_IDX_423</td>
  </tr>
 </table>
 </div>
+<table width='100%' border='0'><tr><td class='container'>
+<br><form action='get'><b>Close relationships</b><span class='degrees' id='degrees' title='Detail diminishes with increased separation from Kostenpost'>
+&nbsp;within <label for='oneDegree'><input type='radio' name='degrees' id='oneDegree' checked>one</label>  <label for='twoDegrees'><input type='radio' name='degrees' id='twoDegrees'>two degrees</label> of separation</span><b>:</b></form>
+<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="FacturatiePost.html" title="FacturatiePost" alt="" coords="261,5,389,136">
+<area shape="rect" id="node2" href="Kostenpost.html" title="Kostenpost" alt="" coords="5,27,217,163">
+</map>
+  <a name='diagram'><img id='oneDegreeImg' src='../diagrams/Kostenpost.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>
+<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="FacturatiePost.html" title="FacturatiePost" alt="" coords="261,45,389,176">
+<area shape="rect" id="node2" href="Facturatie.html" title="Facturatie" alt="" coords="51,5,171,88">
+<area shape="rect" id="node3" href="Kostenpost.html" title="Kostenpost" alt="" coords="5,105,217,241">
+</map>
+
+  <a name='diagram'><img id='twoDegreesImg' src='../diagrams/Kostenpost.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>
+</td></tr></table>
 </div>
 </body>
 </html>

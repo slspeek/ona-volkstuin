@@ -19,25 +19,21 @@ digraph "impliedTwoDegreesRelationshipsDiagram" {
   edge [
     arrowsize="0.8"
   ];
-  "dcLid":"elipses":w -> "Lid":"LidID":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "Contract":"elipses":w -> "Lid":"LidID":e [arrowhead=none dir=back arrowtail=crowodot];
   "filterInschrijfFactuur":"elipses":w -> "Lid":"LidID":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "filterKoopFactuur":"LidID":w -> "Lid":"LidID":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
-  "jnContractLid":"elipses":w -> "Lid":"LidID":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
-  "jnContractLidOpz":"elipses":w -> "Lid":"LidID":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
-  "luVrijLid":"elipses":w -> "Lid":"LidID":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
-  "vwContract":"elipses":w -> "Lid":"LidID":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
-  "vwLid":"elipses":w -> "Lid":"LidID":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
-  "vwLopendContract":"elipses":w -> "Lid":"LidID":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
-  "vwTuinenLijst":"elipses":w -> "Lid":"LidID":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
-  "dcLid" [
+  "filterLid":"FAID":w -> "filterKoopFactuur":"FAID.type":e [arrowhead=none dir=back arrowtail=teeodot style=dashed];
+  "filterLid":"LidID":w -> "Lid":"LidID":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "vwFilterLid":"elipses":w -> "Lid":"LidID":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "Contract" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">dcLid</TD></TR>
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">Contract</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">view</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">133 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
     </TABLE>>
-    URL="dcLid.html"
-    tooltip="dcLid"
+    URL="Contract.html"
+    tooltip="Contract"
   ];
   "filterInschrijfFactuur" [
     label=<
@@ -55,30 +51,21 @@ digraph "impliedTwoDegreesRelationshipsDiagram" {
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">filterKoopFactuur</TD></TR>
       <TR><TD PORT="FAID" COLSPAN="2" BGCOLOR="#bed1b8" ALIGN="LEFT">FAID</TD><TD PORT="FAID.type" ALIGN="LEFT">boolean[1]</TD></TR>
       <TR><TD PORT="LidID" COLSPAN="2" ALIGN="LEFT">LidID</TD><TD PORT="LidID.type" ALIGN="LEFT">integer[4]</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 row</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">0 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 row</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
     </TABLE>>
     URL="filterKoopFactuur.html"
     tooltip="filterKoopFactuur"
   ];
-  "jnContractLid" [
+  "filterLid" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">jnContractLid</TD></TR>
-      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">view</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">filterLid</TD></TR>
+      <TR><TD PORT="FAID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">FAID</TD></TR>
+      <TR><TD PORT="LidID" COLSPAN="3" ALIGN="LEFT">LidID</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 row</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
     </TABLE>>
-    URL="jnContractLid.html"
-    tooltip="jnContractLid"
-  ];
-  "jnContractLidOpz" [
-    label=<
-    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">jnContractLidOpz</TD></TR>
-      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 3</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">view</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
-    </TABLE>>
-    URL="jnContractLidOpz.html"
-    tooltip="jnContractLidOpz"
+    URL="filterLid.html"
+    tooltip="filterLid"
   ];
   "Lid" [
     label=<
@@ -100,59 +87,19 @@ digraph "impliedTwoDegreesRelationshipsDiagram" {
       <TR><TD PORT="Medetuinder" COLSPAN="3" ALIGN="LEFT">Medetuinder</TD></TR>
       <TR><TD PORT="Bijzonderheden" COLSPAN="3" ALIGN="LEFT">Bijzonderheden</TD></TR>
       <TR><TD PORT="Uitschrijving" COLSPAN="3" ALIGN="LEFT">Uitschrijving</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">154 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">10 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">155 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">5 &gt;</TD></TR>
     </TABLE>>
     URL="Lid.html"
     tooltip="Lid"
   ];
-  "luVrijLid" [
+  "vwFilterLid" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">luVrijLid</TD></TR>
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">vwFilterLid</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">view</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
     </TABLE>>
-    URL="luVrijLid.html"
-    tooltip="luVrijLid"
-  ];
-  "vwContract" [
-    label=<
-    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">vwContract</TD></TR>
-      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 4</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">view</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
-    </TABLE>>
-    URL="vwContract.html"
-    tooltip="vwContract"
-  ];
-  "vwLid" [
-    label=<
-    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">vwLid</TD></TR>
-      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">view</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
-    </TABLE>>
-    URL="vwLid.html"
-    tooltip="vwLid"
-  ];
-  "vwLopendContract" [
-    label=<
-    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">vwLopendContract</TD></TR>
-      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 4</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">view</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
-    </TABLE>>
-    URL="vwLopendContract.html"
-    tooltip="vwLopendContract"
-  ];
-  "vwTuinenLijst" [
-    label=<
-    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">vwTuinenLijst</TD></TR>
-      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 4</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">view</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
-    </TABLE>>
-    URL="vwTuinenLijst.html"
-    tooltip="vwTuinenLijst"
+    URL="vwFilterLid.html"
+    tooltip="vwFilterLid"
   ];
 }
