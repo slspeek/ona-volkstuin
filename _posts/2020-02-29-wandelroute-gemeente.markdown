@@ -2,7 +2,7 @@
 layout: post
 title:  "Plan wandelroute"
 date:   2020-02-29
-perma-link: /wandelroute
+permalink: /wandelroute/
 categories: gemeente
 ---
 
