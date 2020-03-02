@@ -3,7 +3,7 @@ layout: page
 title: Over
 permalink: /over/
 ---
-In 1949 werd de spoorlijn Amsterdam Duivendrecht op de kaart gezet:
+In 1949 werd door de spoorlijn Amsterdam Duivendrecht op de kaart gezet:
 [![Met spoorlijn]({{site.baseurl}}/assets/img/MetSpoorlijn.png)](https://www.topotijdreis.nl/)
 
 Toen werd ook de Nederlandse spoorwegen en van Gendt en Loos een volkstuinencomplex langs het kromme spoor gemaakt voor de werknemers.
