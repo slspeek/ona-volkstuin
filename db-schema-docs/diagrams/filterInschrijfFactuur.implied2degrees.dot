@@ -86,7 +86,7 @@ digraph "impliedTwoDegreesRelationshipsDiagram" {
       <TR><TD PORT="Medetuinder" COLSPAN="3" ALIGN="LEFT">Medetuinder</TD></TR>
       <TR><TD PORT="Bijzonderheden" COLSPAN="3" ALIGN="LEFT">Bijzonderheden</TD></TR>
       <TR><TD PORT="Uitschrijving" COLSPAN="3" ALIGN="LEFT">Uitschrijving</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">155 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">5 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">157 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">5 &gt;</TD></TR>
     </TABLE>>
     URL="Lid.html"
     tooltip="Lid"

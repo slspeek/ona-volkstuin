@@ -35,7 +35,6 @@
 <table width='100%' border='0'>
 <tr valign='top'><td class='container' align='left' valign='top'>
 <form name='options' action=''>
- <label for='implied'><input type=checkbox id='implied' checked>Implied relationships</label>
  <label for='showRelatedCols'><input type=checkbox id='showRelatedCols'>Related columns</label>
  <label for='showConstNames'><input type=checkbox id='showConstNames'>Constraints</label>
  <label for='showComments'><input type=checkbox id='showComments'>Comments</label>
@@ -102,27 +101,18 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </tr>
 </thead>
 <tbody valign='top'>
-<tr class='even'>
+<tr class='odd'>
  <td class='primaryKey' title='Primary Key'>FJID</td>
- <td class='detail'>boolean</td>
- <td class='detail' align='right'>1</td>
+ <td class='detail'>integer</td>
+ <td class='detail' align='right'>4</td>
  <td class='detail' align='center'></td>
- <td class='detail' align='center'></td>
+ <td class='detail' align='center' title='Automatically updated by the database'>&nbsp;&radic;&nbsp;</td>
  <td class='detail'></td>
- <td class='detail'>
-  <table border='0' width='100%' cellspacing='0' cellpadding='0'>
-   <tr class='impliedRelationship relative even' valign='top'>
-    <td class='relatedTable detail' title="vwFJaar.FJID's name implies that it's a child of FJaar.FJID, but it doesn't reference that column."><a href='vwFJaar.html'>vwFJaar</a><span class='relatedKey'>.FJID</span>
-    </td>
-    <td class='constraint detail'>Implied Constraint<span title='Restrict delete:
- Parent cannot be deleted if children exist'>&nbsp;R</span></td>
-   </tr>
-  </table>
-</td>
+ <td class='detail'></td>
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
-<tr class='odd'>
+<tr class='even'>
  <td class='detail'>FDatum</td>
  <td class='detail'>date</td>
  <td class='detail' align='right'>8</td>
@@ -133,7 +123,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
-<tr class='even'>
+<tr class='odd'>
  <td class='detail'>VerstuurD</td>
  <td class='detail'>date</td>
  <td class='detail' align='right'>8</td>
@@ -144,7 +134,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
-<tr class='odd'>
+<tr class='even'>
  <td class='detail'>VervalD</td>
  <td class='detail'>date</td>
  <td class='detail' align='right'>8</td>
@@ -155,7 +145,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
-<tr class='even'>
+<tr class='odd'>
  <td class='detail'>HVerstuurD</td>
  <td class='detail'>date</td>
  <td class='detail' align='right'>8</td>
@@ -166,7 +156,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
-<tr class='odd'>
+<tr class='even'>
  <td class='detail'>HVervalD</td>
  <td class='detail'>date</td>
  <td class='detail' align='right'>8</td>
@@ -177,7 +167,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
-<tr class='even'>
+<tr class='odd'>
  <td class='detail'>AVerstuurD</td>
  <td class='detail'>date</td>
  <td class='detail' align='right'>8</td>
@@ -188,7 +178,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
-<tr class='odd'>
+<tr class='even'>
  <td class='detail'>AVervalD</td>
  <td class='detail'>date</td>
  <td class='detail' align='right'>8</td>
@@ -199,8 +189,19 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
+<tr class='odd'>
+ <td class='detail'>RTariefID</td>
+ <td class='detail'>integer</td>
+ <td class='detail' align='right'>4</td>
+ <td class='detail' align='center'></td>
+ <td class='detail' align='center'></td>
+ <td class='detail'></td>
+ <td class='detail'></td>
+ <td class='detail'> </td>
+ <td class='comment detail'></td>
+</tr>
 </table>
-<p title='8 columns'>Table contained 1 rows at di feb. 25 21:26 CET 2020<p/>
+<p title='9 columns'>Table contained 2 rows at vr mrt. 13 01:31 CET 2020<p/>
 </td></tr></table>
 <div class='indent'>
 <b>Indexes:</b>
@@ -218,22 +219,10 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
   <td class='indexedColumn'>FJID</td>
   <td class='detail'>Must be unique</td>
   <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
-  <td class='constraint' style='text-align:left;'>SYS_IDX_431</td>
+  <td class='constraint' style='text-align:left;'>SYS_IDX_414</td>
  </tr>
 </table>
 </div>
-<table width='100%' border='0'><tr><td class='container'>
-<br><form action='get'><b>Close relationships:</b></form><map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="FJaar.html" title="FJaar" alt="" coords="7,5,195,261">
-</map>
-  <a name='diagram'><img id='oneDegreeImg' src='../diagrams/FJaar.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>
-<map id="impliedTwoDegreesRelationshipsDiagram" name="impliedTwoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="vwFJaar.html" title="vwFJaar" alt="" coords="237,8,344,307">
-<area shape="rect" id="node2" href="FJaar.html" title="FJaar" alt="" coords="5,5,193,261">
-</map>
-
-  <a name='diagram'><img id='impliedTwoDegreesImg' src='../diagrams/FJaar.implied2degrees.png' usemap='#impliedTwoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>
-</td></tr></table>
 </div>
 </body>
 </html>

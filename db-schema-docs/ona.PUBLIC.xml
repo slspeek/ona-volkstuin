@@ -19,13 +19,13 @@
          <column autoUpdated="false" digits="2" id="7" name="Overname" nullable="true" remarks="" size="100" type="NUMERIC"/>
          <column autoUpdated="false" digits="2" id="8" name="OverigeKosten" nullable="true" remarks="" size="100" type="NUMERIC"/>
          <primaryKey column="ContractID" sequenceNumberInPK="1"/>
-         <index name="SYS_IDX_415" unique="true">
+         <index name="SYS_IDX_398" unique="true">
             <column ascending="true" name="ContractID"/>
          </index>
-         <index name="SYS_IDX_417" unique="false">
+         <index name="SYS_IDX_400" unique="false">
             <column ascending="true" name="RLidID"/>
          </index>
-         <index name="SYS_IDX_419" unique="false">
+         <index name="SYS_IDX_402" unique="false">
             <column ascending="true" name="RTuinID"/>
          </index>
       </table>
@@ -36,7 +36,7 @@
          <column autoUpdated="false" digits="0" id="1" name="Code" nullable="true" remarks="" size="200" type="VARCHAR"/>
          <column autoUpdated="false" digits="0" id="2" name="Factuurtekst" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
          <primaryKey column="FacturatieID" sequenceNumberInPK="1"/>
-         <index name="SYS_IDX_421" unique="true">
+         <index name="SYS_IDX_404" unique="true">
             <column ascending="true" name="FacturatieID"/>
          </index>
       </table>
@@ -50,14 +50,14 @@
          <column autoUpdated="false" digits="0" id="2" name="Volgnummer" nullable="false" remarks="" size="4" type="INTEGER"/>
          <primaryKey column="RFacturatieID" sequenceNumberInPK="1"/>
          <primaryKey column="RKostenpostID" sequenceNumberInPK="2"/>
-         <index name="SYS_IDX_425" unique="true">
+         <index name="SYS_IDX_408" unique="true">
             <column ascending="true" name="RFacturatieID"/>
             <column ascending="true" name="RKostenpostID"/>
          </index>
-         <index name="SYS_IDX_427" unique="false">
+         <index name="SYS_IDX_410" unique="false">
             <column ascending="true" name="RFacturatieID"/>
          </index>
-         <index name="SYS_IDX_429" unique="false">
+         <index name="SYS_IDX_412" unique="false">
             <column ascending="true" name="RKostenpostID"/>
          </index>
       </table>
@@ -67,11 +67,19 @@
             <parent column="ContractID" foreignKey="SYS_FK_381" implied="false" onDeleteCascade="false" table="Contract"/>
          </column>
          <primaryKey column="FTID" sequenceNumberInPK="1"/>
-         <index name="SYS_IDX_441" unique="true">
+         <index name="SYS_IDX_424" unique="true">
             <column ascending="true" name="FTID"/>
          </index>
-         <index name="SYS_IDX_443" unique="false">
+         <index name="SYS_IDX_426" unique="false">
             <column ascending="true" name="ContractID"/>
+         </index>
+      </table>
+      <table name="filterFJaar" numRows="1" remarks="" schema="PUBLIC" type="TABLE">
+         <column autoUpdated="false" digits="0" id="0" name="FFJID" nullable="false" remarks="" size="1" type="BOOLEAN"/>
+         <column autoUpdated="false" digits="0" id="1" name="RFJaarID" nullable="false" remarks="" size="4" type="INTEGER"/>
+         <primaryKey column="FFJID" sequenceNumberInPK="1"/>
+         <index name="SYS_IDX_430" unique="true">
+            <column ascending="true" name="FFJID"/>
          </index>
       </table>
       <table name="filterInschrijfFactuur" numRows="1" remarks="" schema="PUBLIC" type="TABLE">
@@ -80,7 +88,7 @@
             <parent column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Lid"/>
          </column>
          <primaryKey column="FIID" sequenceNumberInPK="1"/>
-         <index name="SYS_IDX_435" unique="true">
+         <index name="SYS_IDX_418" unique="true">
             <column ascending="true" name="FIID"/>
          </index>
       </table>
@@ -92,7 +100,7 @@
             <parent column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Lid"/>
          </column>
          <primaryKey column="FAID" sequenceNumberInPK="1"/>
-         <index name="SYS_IDX_433" unique="true">
+         <index name="SYS_IDX_416" unique="true">
             <column ascending="true" name="FAID"/>
          </index>
       </table>
@@ -104,7 +112,7 @@
             <parent column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Lid"/>
          </column>
          <primaryKey column="FAID" sequenceNumberInPK="1"/>
-         <index name="SYS_IDX_445" unique="true">
+         <index name="SYS_IDX_428" unique="true">
             <column ascending="true" name="FAID"/>
          </index>
       </table>
@@ -114,17 +122,15 @@
             <parent column="RContractID" foreignKey="SYS_FK_388" implied="false" onDeleteCascade="false" table="Opzegging"/>
          </column>
          <primaryKey column="FOPID" sequenceNumberInPK="1"/>
-         <index name="SYS_IDX_437" unique="true">
+         <index name="SYS_IDX_420" unique="true">
             <column ascending="true" name="FOPID"/>
          </index>
-         <index name="SYS_IDX_439" unique="false">
+         <index name="SYS_IDX_422" unique="false">
             <column ascending="true" name="RContractID"/>
          </index>
       </table>
-      <table name="FJaar" numRows="1" remarks="" schema="PUBLIC" type="TABLE">
-         <column autoUpdated="false" digits="0" id="0" name="FJID" nullable="false" remarks="" size="1" type="BOOLEAN">
-            <child column="FJID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="vwFJaar"/>
-         </column>
+      <table name="FJaar" numRows="2" remarks="" schema="PUBLIC" type="TABLE">
+         <column autoUpdated="true" digits="0" id="0" name="FJID" nullable="false" remarks="" size="4" type="INTEGER"/>
          <column autoUpdated="false" digits="0" id="1" name="FDatum" nullable="false" remarks="" size="8" type="DATE"/>
          <column autoUpdated="false" digits="0" id="2" name="VerstuurD" nullable="true" remarks="" size="8" type="DATE"/>
          <column autoUpdated="false" digits="0" id="3" name="VervalD" nullable="true" remarks="" size="8" type="DATE"/>
@@ -132,8 +138,9 @@
          <column autoUpdated="false" digits="0" id="5" name="HVervalD" nullable="true" remarks="" size="8" type="DATE"/>
          <column autoUpdated="false" digits="0" id="6" name="AVerstuurD" nullable="true" remarks="" size="8" type="DATE"/>
          <column autoUpdated="false" digits="0" id="7" name="AVervalD" nullable="true" remarks="" size="8" type="DATE"/>
+         <column autoUpdated="false" digits="0" id="8" name="RTariefID" nullable="false" remarks="" size="4" type="INTEGER"/>
          <primaryKey column="FJID" sequenceNumberInPK="1"/>
-         <index name="SYS_IDX_431" unique="true">
+         <index name="SYS_IDX_414" unique="true">
             <column ascending="true" name="FJID"/>
          </index>
       </table>
@@ -144,11 +151,11 @@
          <column autoUpdated="false" digits="0" id="1" name="Beschrijving" nullable="false" remarks="" size="200" type="VARCHAR"/>
          <column autoUpdated="false" digits="0" id="2" name="Rekening" nullable="true" remarks="" size="510" type="VARCHAR"/>
          <primaryKey column="KostenpostID" sequenceNumberInPK="1"/>
-         <index name="SYS_IDX_423" unique="true">
+         <index name="SYS_IDX_406" unique="true">
             <column ascending="true" name="KostenpostID"/>
          </index>
       </table>
-      <table name="Lid" numRows="155" remarks="" schema="PUBLIC" type="TABLE">
+      <table name="Lid" numRows="157" remarks="" schema="PUBLIC" type="TABLE">
          <column autoUpdated="true" digits="0" id="0" name="LidID" nullable="false" remarks="" size="4" type="INTEGER">
             <child column="RLidID" foreignKey="SYS_FK_392" implied="false" onDeleteCascade="false" table="Contract"/>
             <child column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="filterInschrijfFactuur"/>
@@ -192,30 +199,12 @@
          <column autoUpdated="false" digits="2" id="6" name="OvernamEind" nullable="true" remarks="" size="100" type="NUMERIC"/>
          <column autoUpdated="false" digits="0" id="7" name="Taxatiedatum" nullable="true" remarks="" size="8" type="DATE"/>
          <primaryKey column="RContractID" sequenceNumberInPK="1"/>
-         <index name="SYS_IDX_413" unique="true">
+         <index name="SYS_IDX_52" unique="true">
             <column ascending="true" name="RContractID"/>
          </index>
       </table>
-      <table name="Prijs" numRows="1" remarks="" schema="PUBLIC" type="TABLE">
-         <column autoUpdated="false" digits="0" id="0" name="PrijsID" nullable="false" remarks="" size="1" type="BOOLEAN">
-            <child column="PrijsID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="vwTarief"/>
-         </column>
-         <column autoUpdated="false" digits="0" id="1" name="RTariefID" nullable="false" remarks="" size="4" type="INTEGER">
-            <parent column="TariefID" foreignKey="SYS_FK_408" implied="false" onDeleteCascade="false" table="Tarief"/>
-         </column>
-         <primaryKey column="PrijsID" sequenceNumberInPK="1"/>
-         <index name="SYS_IDX_409" unique="true">
-            <column ascending="true" name="PrijsID"/>
-         </index>
-         <index name="SYS_IDX_411" unique="false">
-            <column ascending="true" name="RTariefID"/>
-         </index>
-      </table>
       <table name="Tarief" numRows="1" remarks="" schema="PUBLIC" type="TABLE">
-         <column autoUpdated="true" digits="0" id="0" name="TariefID" nullable="false" remarks="" size="4" type="INTEGER">
-            <child column="RTariefID" foreignKey="SYS_FK_408" implied="false" onDeleteCascade="false" table="Prijs"/>
-            <child column="TariefID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="vwTarief"/>
-         </column>
+         <column autoUpdated="true" digits="0" id="0" name="TariefID" nullable="false" remarks="" size="4" type="INTEGER"/>
          <column autoUpdated="false" digits="2" id="1" name="AspContrib" nullable="false" remarks="" size="100" type="NUMERIC"/>
          <column autoUpdated="false" digits="2" id="2" name="TuinContrib" nullable="false" remarks="" size="100" type="NUMERIC"/>
          <column autoUpdated="false" digits="2" id="3" name="Huur" nullable="false" remarks="" size="100" type="NUMERIC"/>
@@ -228,6 +217,7 @@
          <column autoUpdated="false" digits="0" id="10" name="AdminstratieKosten" nullable="true" remarks="" size="100" type="NUMERIC"/>
          <column autoUpdated="false" digits="2" id="11" name="AdmKosten" nullable="true" remarks="" size="100" type="NUMERIC"/>
          <column autoUpdated="false" digits="2" id="12" name="Aangetekend" nullable="true" remarks="" size="100" type="NUMERIC"/>
+         <column autoUpdated="false" digits="0" id="13" name="Commentaar" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
          <primaryKey column="TariefID" sequenceNumberInPK="1"/>
          <index name="SYS_IDX_50" unique="true">
             <column ascending="true" name="TariefID"/>
@@ -255,39 +245,6 @@
          <column autoUpdated="false" digits="0" id="0" name="LidID" nullable="true" remarks="" size="4" type="INTEGER">
             <parent column="LidID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Lid"/>
          </column>
-      </table>
-      <table name="vwFJaar" numRows="0" remarks="" schema="PUBLIC" type="VIEW">
-         <column autoUpdated="false" digits="0" id="0" name="FJID" nullable="true" remarks="" size="1" type="BOOLEAN">
-            <parent column="FJID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="FJaar"/>
-         </column>
-         <column autoUpdated="false" digits="0" id="1" name="FDatum" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="0" id="2" name="VerstuurD" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="0" id="3" name="VervalD" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="0" id="4" name="HVerstuurD" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="0" id="5" name="HVervalD" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="0" id="6" name="AVerstuurD" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="0" id="7" name="AVervalD" nullable="true" remarks="" size="8" type="DATE"/>
-         <column autoUpdated="false" digits="0" id="8" name="Jaar" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="9" name="JaarCode" nullable="true" remarks="" size="2147483647" type="VARCHAR"/>
-      </table>
-      <table name="vwTarief" numRows="0" remarks="" schema="PUBLIC" type="VIEW">
-         <column autoUpdated="false" digits="0" id="0" name="PrijsID" nullable="true" remarks="" size="1" type="BOOLEAN">
-            <parent column="PrijsID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Prijs"/>
-         </column>
-         <column autoUpdated="false" digits="0" id="1" name="RTariefID" nullable="true" remarks="" size="4" type="INTEGER"/>
-         <column autoUpdated="false" digits="0" id="2" name="TariefID" nullable="true" remarks="" size="4" type="INTEGER">
-            <parent column="TariefID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="Tarief"/>
-         </column>
-         <column autoUpdated="false" digits="2" id="3" name="AspContrib" nullable="true" remarks="" size="100" type="NUMERIC"/>
-         <column autoUpdated="false" digits="2" id="4" name="TuinContrib" nullable="true" remarks="" size="100" type="NUMERIC"/>
-         <column autoUpdated="false" digits="2" id="5" name="Huur" nullable="true" remarks="" size="100" type="NUMERIC"/>
-         <column autoUpdated="false" digits="2" id="6" name="Borg" nullable="true" remarks="" size="100" type="NUMERIC"/>
-         <column autoUpdated="false" digits="2" id="7" name="BijdrageMin" nullable="true" remarks="" size="10" type="NUMERIC"/>
-         <column autoUpdated="false" digits="2" id="8" name="BijdrageMax" nullable="true" remarks="" size="100" type="NUMERIC"/>
-         <column autoUpdated="false" digits="2" id="9" name="AspAdmin" nullable="true" remarks="" size="100" type="NUMERIC"/>
-         <column autoUpdated="false" digits="2" id="10" name="Boete" nullable="true" remarks="" size="100" type="NUMERIC"/>
-         <column autoUpdated="false" digits="2" id="11" name="Aangetekend" nullable="true" remarks="" size="100" type="NUMERIC"/>
-         <column autoUpdated="false" digits="2" id="12" name="AdmKosten" nullable="true" remarks="" size="100" type="NUMERIC"/>
       </table>
    </tables>
 </database>

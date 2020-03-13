@@ -110,17 +110,6 @@ digraph "compactImpliedRelationshipsDiagram" {
     URL="tables/filterOpzegging.html"
     tooltip="filterOpzegging"
   ];
-  "FJaar" [
-    label=<
-    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">FJaar</TD></TR>
-      <TR><TD PORT="FJID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">FJID</TD></TR>
-      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 row</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
-    </TABLE>>
-    URL="tables/FJaar.html"
-    tooltip="FJaar"
-  ];
   "Kostenpost" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -138,7 +127,7 @@ digraph "compactImpliedRelationshipsDiagram" {
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">Lid</TD></TR>
       <TR><TD PORT="LidID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">LidID</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">155 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">157 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
     </TABLE>>
     URL="tables/Lid.html"
     tooltip="Lid"
@@ -153,28 +142,6 @@ digraph "compactImpliedRelationshipsDiagram" {
     </TABLE>>
     URL="tables/Opzegging.html"
     tooltip="Opzegging"
-  ];
-  "Prijs" [
-    label=<
-    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">Prijs</TD></TR>
-      <TR><TD PORT="PrijsID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">PrijsID</TD></TR>
-      <TR><TD PORT="RTariefID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">RTariefID</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 row</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
-    </TABLE>>
-    URL="tables/Prijs.html"
-    tooltip="Prijs"
-  ];
-  "Tarief" [
-    label=<
-    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">Tarief</TD></TR>
-      <TR><TD PORT="TariefID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">TariefID</TD></TR>
-      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 row</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
-    </TABLE>>
-    URL="tables/Tarief.html"
-    tooltip="Tarief"
   ];
   "Tuin" [
     label=<
@@ -207,29 +174,6 @@ digraph "compactImpliedRelationshipsDiagram" {
     URL="tables/vwFilterLid.html"
     tooltip="vwFilterLid"
   ];
-  "vwFJaar" [
-    label=<
-    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">vwFJaar</TD></TR>
-      <TR><TD PORT="FJID" COLSPAN="3" ALIGN="LEFT">FJID</TD></TR>
-      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">view</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
-    </TABLE>>
-    URL="tables/vwFJaar.html"
-    tooltip="vwFJaar"
-  ];
-  "vwTarief" [
-    label=<
-    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">vwTarief</TD></TR>
-      <TR><TD PORT="PrijsID" COLSPAN="3" ALIGN="LEFT">PrijsID</TD></TR>
-      <TR><TD PORT="TariefID" COLSPAN="3" ALIGN="LEFT">TariefID</TD></TR>
-      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">view</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
-    </TABLE>>
-    URL="tables/vwTarief.html"
-    tooltip="vwTarief"
-  ];
   "Contract":"RLidID":w -> "Lid":"LidID":e [arrowhead=none dir=back arrowtail=crowodot];
   "Contract":"RTuinID":w -> "Tuin":"TuinID":e [arrowhead=none dir=back arrowtail=crowodot];
   "FacturatiePost":"RFacturatieID":w -> "Facturatie":"FacturatieID":e [arrowhead=none dir=back arrowtail=crowodot];
@@ -240,10 +184,6 @@ digraph "compactImpliedRelationshipsDiagram" {
   "filterLid":"FAID":w -> "filterKoopFactuur":"FAID":e [arrowhead=none dir=back arrowtail=teeodot style=dashed];
   "filterLid":"LidID":w -> "Lid":"LidID":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "filterOpzegging":"RContractID":w -> "Opzegging":"RContractID":e [arrowhead=none dir=back arrowtail=crowodot];
-  "Prijs":"RTariefID":w -> "Tarief":"TariefID":e [arrowhead=none dir=back arrowtail=crowodot];
   "vwFilterContract":"ContractID":w -> "Contract":"ContractID":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "vwFilterLid":"LidID":w -> "Lid":"LidID":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
-  "vwFJaar":"FJID":w -> "FJaar":"FJID":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
-  "vwTarief":"PrijsID":w -> "Prijs":"PrijsID":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
-  "vwTarief":"TariefID":w -> "Tarief":"TariefID":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
 }
