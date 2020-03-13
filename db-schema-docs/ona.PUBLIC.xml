@@ -213,11 +213,9 @@
          <column autoUpdated="false" digits="2" id="6" name="BijdrageMax" nullable="false" remarks="" size="100" type="NUMERIC"/>
          <column autoUpdated="false" digits="2" id="7" name="AspAdmin" nullable="true" remarks="" size="100" type="NUMERIC"/>
          <column autoUpdated="false" digits="2" id="8" name="Boete" nullable="true" remarks="" size="100" type="NUMERIC"/>
-         <column autoUpdated="false" digits="0" id="9" name="Portokosten" nullable="true" remarks="" size="100" type="NUMERIC"/>
-         <column autoUpdated="false" digits="0" id="10" name="AdminstratieKosten" nullable="true" remarks="" size="100" type="NUMERIC"/>
-         <column autoUpdated="false" digits="2" id="11" name="AdmKosten" nullable="true" remarks="" size="100" type="NUMERIC"/>
-         <column autoUpdated="false" digits="2" id="12" name="Aangetekend" nullable="true" remarks="" size="100" type="NUMERIC"/>
-         <column autoUpdated="false" digits="0" id="13" name="Commentaar" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
+         <column autoUpdated="false" digits="2" id="9" name="AdmKosten" nullable="true" remarks="" size="100" type="NUMERIC"/>
+         <column autoUpdated="false" digits="2" id="10" name="Aangetekend" nullable="true" remarks="" size="100" type="NUMERIC"/>
+         <column autoUpdated="false" digits="0" id="11" name="Commentaar" nullable="true" remarks="" size="0" type="LONGVARCHAR"/>
          <primaryKey column="TariefID" sequenceNumberInPK="1"/>
          <index name="SYS_IDX_50" unique="true">
             <column ascending="true" name="TariefID"/>

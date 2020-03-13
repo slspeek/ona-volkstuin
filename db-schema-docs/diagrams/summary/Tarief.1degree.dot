@@ -30,8 +30,6 @@ digraph "Tarief" {
       <TR><TD PORT="BijdrageMax" COLSPAN="3" ALIGN="LEFT">BijdrageMax</TD></TR>
       <TR><TD PORT="AspAdmin" COLSPAN="3" ALIGN="LEFT">AspAdmin</TD></TR>
       <TR><TD PORT="Boete" COLSPAN="3" ALIGN="LEFT">Boete</TD></TR>
-      <TR><TD PORT="Portokosten" COLSPAN="3" ALIGN="LEFT">Portokosten</TD></TR>
-      <TR><TD PORT="AdminstratieKosten" COLSPAN="3" ALIGN="LEFT">AdminstratieKosten</TD></TR>
       <TR><TD PORT="AdmKosten" COLSPAN="3" ALIGN="LEFT">AdmKosten</TD></TR>
       <TR><TD PORT="Aangetekend" COLSPAN="3" ALIGN="LEFT">Aangetekend</TD></TR>
       <TR><TD PORT="Commentaar" COLSPAN="3" ALIGN="LEFT">Commentaar</TD></TR>
