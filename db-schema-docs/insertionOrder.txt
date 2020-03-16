@@ -4,7 +4,7 @@ Kostenpost
 Tarief
 Tuin
 Contract
-filterKoopFactuur
+filterLid
 FJaar
 Opzegging
 filterContract
@@ -12,4 +12,4 @@ filterFJaar
 filterInschrijfFactuur
 filterOpzegging
 FacturatiePost
-filterLid
+filterKoopFactuur

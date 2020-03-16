@@ -215,8 +215,8 @@ digraph "compactImpliedRelationshipsDiagram" {
   "filterContract":"ContractID":w -> "Contract":"ContractID":e [arrowhead=none dir=back arrowtail=crowodot];
   "filterFJaar":"RFJaarID":w -> "FJaar":"FJID":e [arrowhead=none dir=back arrowtail=crowodot];
   "filterInschrijfFactuur":"LidID":w -> "Lid":"LidID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "filterKoopFactuur":"FAID":w -> "filterLid":"FAID":e [arrowhead=none dir=back arrowtail=teeodot style=dashed];
   "filterKoopFactuur":"LidID":w -> "Lid":"LidID":e [arrowhead=none dir=back arrowtail=crowodot];
-  "filterLid":"FAID":w -> "filterKoopFactuur":"FAID":e [arrowhead=none dir=back arrowtail=teeodot style=dashed];
   "filterLid":"LidID":w -> "Lid":"LidID":e [arrowhead=none dir=back arrowtail=crowodot];
   "filterOpzegging":"RContractID":w -> "Opzegging":"RContractID":e [arrowhead=none dir=back arrowtail=crowodot];
   "FJaar":"RTariefID":w -> "Tarief":"TariefID":e [arrowhead=none dir=back arrowtail=crowodot];

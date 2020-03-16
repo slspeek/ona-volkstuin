@@ -103,7 +103,7 @@
       </table>
       <table name="filterKoopFactuur" numRows="1" remarks="" schema="PUBLIC" type="TABLE">
          <column autoUpdated="false" digits="0" id="0" name="FAID" nullable="false" remarks="" size="1" type="BOOLEAN">
-            <child column="FAID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="filterLid"/>
+            <parent column="FAID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="filterLid"/>
          </column>
          <column autoUpdated="false" digits="0" id="1" name="LidID" nullable="true" remarks="" size="4" type="INTEGER">
             <parent column="LidID" foreignKey="SYS_FK_456" implied="false" onDeleteCascade="false" table="Lid"/>
@@ -118,7 +118,7 @@
       </table>
       <table name="filterLid" numRows="1" remarks="" schema="PUBLIC" type="TABLE">
          <column autoUpdated="false" digits="0" id="0" name="FAID" nullable="false" remarks="" size="1" type="BOOLEAN">
-            <parent column="FAID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="filterKoopFactuur"/>
+            <child column="FAID" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="filterKoopFactuur"/>
          </column>
          <column autoUpdated="false" digits="0" id="1" name="LidID" nullable="true" remarks="" size="4" type="INTEGER">
             <parent column="LidID" foreignKey="SYS_FK_452" implied="false" onDeleteCascade="false" table="Lid"/>

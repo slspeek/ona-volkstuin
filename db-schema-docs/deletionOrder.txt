@@ -1,4 +1,4 @@
-filterLid
+filterKoopFactuur
 FacturatiePost
 filterOpzegging
 filterInschrijfFactuur
@@ -6,7 +6,7 @@ filterFJaar
 filterContract
 Opzegging
 FJaar
-filterKoopFactuur
+filterLid
 Contract
 Tuin
 Tarief

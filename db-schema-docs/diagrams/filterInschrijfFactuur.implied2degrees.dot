@@ -21,8 +21,8 @@ digraph "impliedTwoDegreesRelationshipsDiagram" {
   ];
   "Contract":"elipses":w -> "Lid":"LidID":e [arrowhead=none dir=back arrowtail=crowodot];
   "filterInschrijfFactuur":"LidID":w -> "Lid":"LidID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "filterKoopFactuur":"elipses":w -> "filterLid":"elipses":e [arrowhead=none dir=back arrowtail=teeodot style=dashed];
   "filterKoopFactuur":"elipses":w -> "Lid":"LidID":e [arrowhead=none dir=back arrowtail=crowodot];
-  "filterLid":"elipses":w -> "filterKoopFactuur":"elipses":e [arrowhead=none dir=back arrowtail=teeodot style=dashed];
   "filterLid":"elipses":w -> "Lid":"LidID":e [arrowhead=none dir=back arrowtail=crowodot];
   "vwFilterLid":"elipses":w -> "Lid":"LidID":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "Contract" [
@@ -51,7 +51,7 @@ digraph "impliedTwoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">filterKoopFactuur</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 row</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 row</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
     </TABLE>>
     URL="filterKoopFactuur.html"
     tooltip="filterKoopFactuur"
@@ -61,7 +61,7 @@ digraph "impliedTwoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">filterLid</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 row</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 row</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
     </TABLE>>
     URL="filterLid.html"
     tooltip="filterLid"
