@@ -22,9 +22,9 @@ title: Volkstuinvereniging Ontspanning na Arbeid
 email: onadiemen@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   ONA voor natuurlijk tuinieren zonder poespas
+  Postadres: Postbus 109, 9670 AC, Winschoten
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://onadiemen.nl" # the base hostname & protocol for your site, e.g. http://example.com
-
 # Build settings
 theme: minima
 plugins:
