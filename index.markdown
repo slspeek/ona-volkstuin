@@ -6,7 +6,7 @@ layout: home
 list_title: Berichten
 ---
 
-## Ledenstop
+# Ledenstop
 Op dit moment zijn er geen tuinen beschikbaar. De wachtlijst is inmiddels zo lang dat wij geen ook nieuwe inschrijvingen meer aannemen voor de wachtlijst.
 
 ## Wandelroute gemeente
