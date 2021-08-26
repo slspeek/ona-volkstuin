@@ -1,11 +1,11 @@
 ---
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-title: Welkom
+title: Home
 layout: home
 list_title: Berichten
 ---
-Van harte welkom op de website van Volkstuinvereniging Ontspanning Na Arbeid 
+Van harte welkom op de website van Volkstuinvereniging Ontspanning Na Arbeid
 
 ## Ledenstop
 Op dit moment zijn er geen tuinen beschikbaar. De wachtlijst is inmiddels zo lang dat wij geen ook nieuwe inschrijvingen meer aannemen voor de wachtlijst.
