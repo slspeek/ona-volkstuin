@@ -7,10 +7,10 @@ In deze privacyverklaring lees je hoe ONA omgaat met je persoonsgegevens in het 
 ONA hecht belang aan de privacy van haar leden en aspirant-leden. We gaan daarom zorgvuldig om met je persoonsgegevens en houden ons daarbij aan de Algemene Verordening Gegevensverwerking (AVG). In deze privacyverklaring vertellen we hoe we dat doen.
 ## Welke persoonsgegevens verzamelen we van je?
 Wij verwerken alleen persoonsgegevens die wij nodig hebben voor de ledenadministratie en de boekhouding van de vereniging. Wij verzamelen we de volgende gegevens van je:
-- NAW-gegevens,
-- telefoonnummers,
-- emailadres,
-- geboortedatum,
+- NAW-gegevens
+- telefoonnummers
+- emailadres
+- geboortedatum
 - geslacht
 
 ## Grondslag voor verwerking
