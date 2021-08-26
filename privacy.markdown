@@ -6,7 +6,7 @@ permalink: /privacy/
 In deze privacyverklaring lees je hoe ONA omgaat met je persoonsgegevens in het kader van het lidmaatschap van ONA.
 ONA hecht belang aan de privacy van haar leden en aspirant-leden. We gaan daarom zorgvuldig om met je persoonsgegevens en houden ons daarbij aan de Algemene Verordening Gegevensverwerking (AVG). In deze privacyverklaring vertellen we hoe we dat doen.
 ## Welke persoonsgegevens verzamelen we van je?
-Wij verwerken alleen persoonsgegevens die wij nodig hebben voor de ledenadministratie en de boekhouding van de vereniging. Wij verzamelen we de volgende gegevens van je:
+Wij verwerken alleen persoonsgegevens die wij nodig hebben voor de ledenadministratie en de boekhouding van de vereniging. Wij verzamelen de volgende gegevens van je:
 - NAW-gegevens
 - telefoonnummers
 - emailadres
@@ -14,15 +14,15 @@ Wij verwerken alleen persoonsgegevens die wij nodig hebben voor de ledenadminist
 - geslacht
 
 ## Grondslag voor verwerking
-Persoonsgegevens mogen alleen verwerkt worden als er een rechtmatige grondslag voor is. We verwerken je persoonsgegevens in het kader van de ledenadministratie en de boekhouding van de vereniging. Deze administraties zijn noodzakelijk voor het runnen van de vereniging.
+Persoonsgegevens mogen alleen verwerkt worden als er een rechtmatige grondslag voor is. We verwerken je persoonsgegevens in het kader van de ledenadministratie en de boekhouding van de vereniging. Deze administraties zijn noodzakelijk voor het besturen van de vereniging.
 
 Om een goed werkende vereniging te hebben is het noodzakelijk om in beperkte mate persoonsgegevens te verwerken. Dataminimalisatie is daarbij wel ons uitgangspunt.
 
 ## Hoe lang bewaren we je gegevens?
-Bovenstaande gegevens worden bewaard zolang het nodig is voor een goede ledenadministratie en boekhouding met een maximale bewaartermijn van 3 maanden na de opzegging van de lidmaatschap. De gegevens worden vervolgens gewist, tenzij er een wettelijke plicht is die langer bewaren vereist. Dat geldt voor de financiële gegevens die vallen onder bewaarplicht wegens Algemene Wet inzake Rijksbelastingen (AWR) en kent een bewaartermijn van 7 jaar vanaf 1 januari volgende op het jaar van de start van de administratie van een boekjaar.
+Bovenstaande gegevens worden bewaard zolang het nodig is voor een goede ledenadministratie en boekhouding met een maximale bewaartermijn van 3 maanden na de opzegging van het lidmaatschap. De gegevens worden vervolgens gewist, tenzij er een wettelijke plicht is die langer bewaren vereist. Dat geldt voor de financiële gegevens die vallen onder bewaarplicht wegens Algemene Wet inzake Rijksbelastingen (AWR) en kent een bewaartermijn van 7 jaar vanaf 1 januari volgende op het jaar van de start van de administratie van een boekjaar.
 
 ## Wie heeft toegang tot je gegevens?
-De gegevens zijn alleen toegankelijk voor het bestuur van de vereniging. In de regel delen we je gegevens nooit met derden tenzij er een gerechtvaardigd belang is of vanwege een wettelijke verplichting die op de ons rust.
+De gegevens zijn alleen toegankelijk voor het bestuur van de vereniging. In de regel delen we je gegevens nooit met derden tenzij er een gerechtvaardigd belang is of vanwege een wettelijke verplichting die op ons rust.
 
 ## Je rechten als lid van de vereniging
 Als lid van ONA heb je een aantal rechten waarvan je gebruik kunt maken op grond van toepasselijke wet- en regelgeving die toeziet op de bescherming van persoonsgegevens. Zo kun je contact met ons opnemen om te verzoeken
@@ -47,7 +47,7 @@ Je hebt verder het recht om je persoonsgegevens te laten wissen, dat betekent de
 Je hebt het recht de verwerking van je persoonsgegevens te laten beperken. Dat betekent dat de verwerking van je gegevens gedurende een bepaalde tijd wordt opgeschort. Bijvoorbeeld wanneer de juistheid van je persoonsgegevens wordt betwist maar er enige tijd gemoeid is met het verifiëren daarvan. Dit recht belet ons niet om je persoonsgegevens te blijven opslaan. Voordat de beperking wordt opgeheven word je daarvan op de hoogte gebracht.
 
 ## Recht op overdraagbaarheid van gegevens
-Het recht op overdraagbaarheid van gegevens houdt in dat je het recht hebt de op je betrekking hebbende persoonsgegevens, indien technisch mogelijk, in een gestructureerde, gangbare en machine leesbare vorm te verkrijgen en deze aan een andere verwerkingsverantwoordelijke over te dragen. Op verzoek en indien technisch mogelijk, worden je persoonsgegevens door ons rechtstreeks overgedragen aan de andere verwerkingsverantwoordelijke.
+Het recht op overdraagbaarheid van gegevens houdt in dat je het recht hebt de op je betrekking hebbende persoonsgegevens, indien technisch mogelijk, in een gestructureerde, gangbare en machineleesbare vorm te verkrijgen en deze aan een andere verwerkingsverantwoordelijke over te dragen. Op verzoek en indien technisch mogelijk, worden je persoonsgegevens door ons rechtstreeks overgedragen aan de andere verwerkingsverantwoordelijke.
 
 ## Recht van bezwaar
 Je hebt het recht bezwaar te maken tegen de verwerking van je persoonsgegevens. Je kunt ons verzoeken je persoonsgegevens niet langer te verwerken. Dit is alleen van toepassing als ‘gerechtvaardigde belangen’ de rechtsgrond voor de verwerking is.
